@@ -25,9 +25,6 @@ body {
   background-color: #00784a !important;
 }
 
-.green:active {
-  position: absolute;
-}
 
 .blue {
   background-color: #174363 !important;
@@ -44,7 +41,6 @@ body {
 
 .btn:active {
   top: 3px;
-  position: absolute;
 }
 
 .btn:focus {
@@ -55,6 +51,7 @@ body {
 }
 
 .btn {
+  position: relative;
   padding: 12px 18px;
   margin: 0;
   color: #fff;
