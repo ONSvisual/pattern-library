@@ -15,6 +15,84 @@ body {
 .ns:active {
   top: 0 !important;
 }
+.setting{
+  padding-left: 44px!important;
+    max-width: 170px!important;
+}
+
+.location{
+  padding-left: 44px!important;
+    max-width: 290px!important;
+}
+
+.pause{
+  padding-left: 44px!important;
+    max-width: 150px!important;
+}
+
+.play{
+  padding-left: 44px!important;
+    max-width: 150px!important;
+}
+
+.setting::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f013";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  font-size: 1.3em;
+  position: absolute;
+  left: 30px;
+  top: 9px;
+}
+.location::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3c5";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  font-size: 1.3em;
+  position: absolute;
+  left: 24px;
+  top: 9px;
+}
+.pause::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f28b";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+  font-size: 1.3em;
+  position: absolute;
+  left: 24px;
+  top: 9px;
+}
+.play::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f144";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+  font-size: 1.3em;
+  position: absolute;
+  left: 24px;
+  top: 9px;
+}
 
 .green {
   background-color: #008e49 !important;
@@ -44,8 +122,7 @@ body {
 }
 
 .btn:focus {
-  border: 3px solid #fe781f;
-  outline: none !important;
+  outline: 3px solid #fe781f;
   box-shadow: 0px !important;
   color: white;
 }
