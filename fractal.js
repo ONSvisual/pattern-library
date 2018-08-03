@@ -13,7 +13,7 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Pattern');
+fractal.set('project.title', 'Pattern Library');
 
 /*
  * Tell Fractal where to look for components.
@@ -55,3 +55,25 @@ fractal.components.set('statuses', {
     color: '#D0D2D3'
   }
 });
+
+/*
+ * Configure the web interface.
+ */
+ fractal.web.set('static.path', `${__dirname}/public`);
+ fractal.web.set('builder.dest', 'dist');
+
+ const theme = require('@frctl/mandelbrot')({
+   skin: 'white',
+   nav: ['docs', 'components'],
+   panels: ['notes', 'html', 'info', 'context'],
+   static: {
+     mount: 'theme'
+   },
+   styles: [
+     'default',
+     '/assets/css/patternlib.css', // Used for eQ Pattern Library specific styles e.g. Colour swatches
+   ],
+   scripts: ['/assets/scripts/bundle.js', 'default']
+ });
+
+ fractal.web.theme(theme);

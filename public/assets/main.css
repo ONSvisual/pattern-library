@@ -1,6 +1,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+
+
 /*Margins*/
 .m-top {
   margin-top: 15px;
@@ -125,8 +128,11 @@ body {
   outline: 3px solid #fe781f;
   box-shadow: 0px !important;
   color: white;
+      outline-offset: 0px;
 }
-
+.btn:active:focus{
+  outline: 0;
+}
 .btn {
   position: relative;
   padding: 12px 18px;
@@ -135,7 +141,7 @@ body {
   font-size: 1.3em !important;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 2px !important;
+  border-radius: 0px !important;
   display: inline-block;
   text-rendering: optimizeLegibility;
   width: 100%;
