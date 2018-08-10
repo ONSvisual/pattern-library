@@ -9,4 +9,7 @@ context:
     text-location: Location button
     text-play: Play button
     text-pause: Pause button
+    text-next: Next button
+    text-prev: Previous button
+
 status: inDevelopment

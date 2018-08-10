@@ -1,12 +1,113 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-
-
-
+h1, h2, h3{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-weight: 700;
+}
+.marg-bot-25{
+  margin-bottom: 25px;
+}
+/*Colours*/
+.center{
+  text-align: center;
+}
+.bg-blue{
+  background-color: #1b5f97;
+  border-right: 2px solid #fff;
+}
+.box{
+  border:2px solid #ccc;
+  padding: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.row{
+  margin: 0;
+  padding: 20px 20px 0;
+}
+.circle{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+.poppy{
+  color: #d32f2f;
+}
+.astral{
+  color: #3B7A9E;
+}
+.matisse{
+  color: #206095;
+}
+.salem{
+  color: #0F8243;
+}
+.onsblue{
+  color: #003C57;
+}
+.carrot{
+  color: #FF9933;
+}
+.circle--grey{
+  background-color: #414042;
+}
+.circle--gallery{
+  background-color: #eaeaea;
+}
+.circle--matisse{
+  background-color: #206095;
+}
+.circle--astral{
+  background-color: #3B7A9E;
+}
+.circle--poppy{
+  background-color: #D32F2F;
+}
+.circle--salem{
+  background-color: #0F8243;
+}
+.circle--onsblue{
+  background-color: #003C57;
+}
+.circle--onsgreen{
+  background-color: #A8BD3A;
+}
+.circle--teal{
+  background-color: #008080;
+}
+.circle--carrot{
+  background-color: #FF9933;
+}
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+.col-title{
+  font-size: 18px;
+    margin: 0;
+font-weight: bold;
+    border-top: 2px dashed #ccc;
+}
+.box-title{
+     font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 12px 0;
+}
 /*Margins*/
 .m-top {
   margin-top: 15px;
+  padding-bottom: 0;
+    margin-bottom: 4px;
 }
 
 /*Margins end*/
@@ -18,27 +119,36 @@ body {
 .ns:active {
   top: 0 !important;
 }
-.setting{
+.btn_setting{
   padding-left: 44px!important;
     max-width: 170px!important;
 }
 
-.location{
+.btn_location{
   padding-left: 44px!important;
     max-width: 290px!important;
 }
 
-.pause{
+.btn_next{
+  padding-left: 30px!important;
+    max-width: 140px!important;
+}
+.btn_prev{
+  padding-left: 30px!important;
+    max-width: 170px!important;
+}
+
+.btn_pause{
   padding-left: 44px!important;
     max-width: 150px!important;
 }
 
-.play{
+.btn_play{
   padding-left: 44px!important;
     max-width: 150px!important;
 }
 
-.setting::before{
+.btn_setting::before{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f013";
@@ -50,9 +160,9 @@ body {
   font-size: 1.3em;
   position: absolute;
   left: 30px;
-  top: 9px;
+  top: 12px;
 }
-.location::before{
+.btn_location::before{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f3c5";
@@ -64,9 +174,41 @@ body {
   font-size: 1.3em;
   position: absolute;
   left: 24px;
-  top: 9px;
+  top: 12px;
 }
-.pause::before{
+.btn_next::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900!important;
+  content: "\f0da";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6em;
+      position: absolute;
+      left: 24px;
+      top: 10px;
+}
+
+.btn_prev::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900!important;
+  content: "\f0d9";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6em;
+      position: absolute;
+      left: 24px;
+      top: 10px;
+}
+
+.btn_pause::before{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f28b";
@@ -79,9 +221,9 @@ body {
   font-size: 1.3em;
   position: absolute;
   left: 24px;
-  top: 9px;
+  top: 12px;
 }
-.play::before{
+.btn_play::before{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f144";
@@ -94,25 +236,25 @@ body {
   font-size: 1.3em;
   position: absolute;
   left: 24px;
-  top: 9px;
+  top: 12px;
 }
 
-.green {
+.btn--green {
   background-color: #008e49 !important;
   box-shadow: 0 3px 0 0 #015f31;
 }
 
-.green:hover {
+.btn--green:hover {
   background-color: #00784a !important;
 }
 
 
-.blue {
+.btn--blue {
   background-color: #174363 !important;
   box-shadow: 0 3px 0 0 #072d49;
 }
 
-.blue:hover {
+.btn--blue:hover {
   background-color: #124d80 !important;
 }
 
@@ -137,6 +279,7 @@ body {
   position: relative;
   padding: 12px 18px;
   margin: 0;
+  line-height:normal;
   color: #fff;
   font-size: 1.3em !important;
   font-size: 1rem;
