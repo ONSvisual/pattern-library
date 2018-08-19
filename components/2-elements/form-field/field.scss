@@ -1,0 +1,37 @@
+.input{
+  border: solid 2px #206095;
+line-height: 2em;
+min-height: 47px;
+}
+.select{
+  border: 2px solid #1b5f97;
+border-radius: 0px;
+-webkit-appearance: none;
+position: relative;
+padding: 12px 5rem 12px 2rem;
+background-size: 1rem;
+line-height: 1.9rem;
+background: #fff url("/assets/img/icons--chevron-down.svg") no-repeat center right 0px;
+width: 100%;
+cursor: pointer;
+
+  &:focus{
+    outline: none;
+  box-shadow: 0 0 0 3px #fe781f;
+  }
+}
+
+
+.select-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.ns {
+  box-shadow: none !important;
+  border-radius: 0px !important;
+
+  &:active {
+    top: 0 !important;
+  }
+}

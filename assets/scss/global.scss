@@ -1,0 +1,24 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3{
+  margin: 0;
+}
+
+/*Margins*/
+.m-top {
+  margin-top: 15px;
+  padding-bottom: 0;
+    margin-bottom: 4px;
+}
+.marg-bot-25{
+  margin-bottom: 25px;
+}
+/*Margins end*/
+@import "/components/**/*.scss";
+@import "../../components/2-elements/button/button.scss";
+@import "../../components/1-styles/colour/colour.scss";
+@import "../../components/1-styles/grids/grids.scss";
+@import "../../docs/index.scss";
+
+@import "../../components/2-elements/form-field/field.scss";
