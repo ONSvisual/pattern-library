@@ -14,6 +14,136 @@ h1, h2, h3 {
   margin-bottom: 25px; }
 
 /*Margins end*/
+.tgl-play:checked + .tgl-btn {
+  background: #008e49; }
+
+.tgl-play + .tgl-btn {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  transition: background-color 0.25s ease-out;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #008e49; }
+
+.tgl + .tgl-btn {
+  display: inline-block;
+  width: 128px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 18px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.tgl-play:checked + .tgl-btn:before {
+  left: -100%; }
+
+.tgl-pause:checked + .tgl-btn:before {
+  top: -58%; }
+
+.tgl-play + .tgl-btn:before {
+  left: -11px;
+  top: 3px;
+  background-image: url(https://onsdigital.github.io/dp-design-manual/images/play-white.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2px; }
+
+.tgl-play + .tgl-btn:after, .tgl-play + .tgl-btn:before {
+  display: inline-block;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: #fff; }
+
+.tgl + .tgl-btn:before {
+  display: none; }
+
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%; }
+
+.tgl + .tgl-btn:after {
+  content: "Pause"; }
+
+.tgl + .tgl-btn:before {
+  content: "Play"; }
+
+.tgl-play:checked + .tgl-btn:after {
+  left: -12px; }
+
+.tgl:checked + .tgl-btn:after {
+  left: -10;
+  top: -37px; }
+
+.tgl-play + .tgl-btn:after {
+  left: 100%;
+  background-image: url(https://onsdigital.github.io/dp-design-manual/images/pause-white.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2px; }
+
+.tgl-play + .tgl-btn:after, .tgl-play + .tgl-btn:before {
+  display: inline-block;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: #fff; }
+
+input[type=checkbox], input[type=radio] {
+  display: none; }
+
+.tgl + .tgl-btn:after {
+  left: 130px;
+  top: -37px; }
+
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.tgl-play:checked + .tgl-btn {
+  background: #206095; }
+
+.tgl-play + .tgl-btn {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  transition: background-color 0.25s ease-out;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #008e49; }
+
+.tgl + .tgl-btn {
+  display: inline-block;
+  width: 128px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 18px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 .btn_setting {
   padding-left: 44px !important;
   max-width: 170px !important; }
