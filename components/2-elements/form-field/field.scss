@@ -1,7 +1,6 @@
 .input{
-  border: solid 2px #206095;
-line-height: 2em;
-min-height: 47px;
+  border: none;
+  padding: 0;
 }
 .select{
   border: 2px solid #1b5f97;
@@ -21,7 +20,11 @@ cursor: pointer;
   }
 }
 
-
+.period{
+border: 2px solid #A6A8AB;
+    height: 40px;
+    font-size: 16px;
+  }
 .select-wrapper{
   position: relative;
   display: inline-block;
@@ -34,4 +37,22 @@ cursor: pointer;
   &:active {
     top: 0 !important;
   }
+}
+.input-window {
+  position: relative;
+
+    &::before{
+      content: "£";
+      position:absolute;
+      height: 40px;
+      width: 40px;
+      font-size: 21px;
+      padding-top: 6px;
+      background-color: #a6a8ab;
+      color: #fff;
+      text-align: center;
+      float: left;
+      font-weight: 600;
+      box-sizing: border-box;
+    }
 }
