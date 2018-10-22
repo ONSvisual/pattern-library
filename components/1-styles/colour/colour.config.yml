@@ -1,2 +1,5 @@
 title: Colour
 status: inDevelopment
+context:
+    Primary: "Primary colours"
+    Secondary: "Secondary Things"

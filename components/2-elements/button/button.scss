@@ -19,24 +19,26 @@ code{
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
-  font-weight: bold; }
+ }
 
 .hljs-number,
 .hljs-literal,
 .hljs-variable,
 .hljs-template-variable,
-.hljs-tag .hljs-attr {
+.hljs-attr, 
+.hljs-name,
+.hljs-attribute {
   color: #008080; }
 
 .hljs-string,
-.hljs-doctag {
+.hljs-doctag, .hljs-value {
   color: #d14; }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
   color: #900;
-  font-weight: bold; }
+ }
 
 .hljs-subst {
   font-weight: normal; }
@@ -44,13 +46,9 @@ code{
 .hljs-type,
 .hljs-class .hljs-title {
   color: #458;
-  font-weight: bold; }
+}
 
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal; }
+
 
 .hljs-regexp,
 .hljs-link {

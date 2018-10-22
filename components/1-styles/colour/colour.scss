@@ -1,3 +1,5 @@
+/*Colour styles*/
+
 /*mixins*/
 $astral: #3B7A9E;
 $poppy: #d32f2f;
@@ -23,7 +25,9 @@ $onsgreen:#A8BD3A;
 .box{
   width: 120px!important;
 }
-
+.col-title span{
+cursor: pointer;
+}
 .center{
   text-align: center;
 }

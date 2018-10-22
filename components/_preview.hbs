@@ -15,28 +15,21 @@
 
 </body>
 
+<!--Scripts-->
+<script src="{{ path '/assets/scripts/bundle.js' }}" charset="utf-8"></script>
+<script src="{{ path '/js/copy.js' }}" charset="utf-8"></script>
 <script src="{{ path '/js/script.js' }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script>
-$(function () {
-    //show
-    $(document).on('click', '.trigger', function () {
-        $(this).addClass("on");
-        setTimeout(RemoveClass, 2000);
-		});
-		function RemoveClass() {
-		$('.trigger').removeClass("on");
-		}
-		});
+$('.govuk-checkboxes__input').click(function(){
+    if($(this).is(":checked")) {
+      $('.govuk-checkboxes__conditional').removeClass("govuk-checkboxes__conditional--hidden");
+        } else {
+        $('.govuk-checkboxes__conditional').addClass("govuk-checkboxes__conditional--hidden");
+    }
+});
 </script>
 
 </html>
