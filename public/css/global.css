@@ -396,8 +396,8 @@ button.copy-btn::after {
   padding: 3px 5px;
   transition: all ease .7s; }
 
-/*Colour styles*/
 /*mixins*/
+/*bits and bobs*/
 /*Colours*/
 .box {
   width: 120px !important; }

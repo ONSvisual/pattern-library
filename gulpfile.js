@@ -17,12 +17,9 @@ gulp.task('sass',function() {
     .pipe(gulp.dest('public/css'))
 });
 
-gulp.task('watch', ['sass'], function() {
-   gulp.watch([
-        'components/**/*.scss',
-        'assets/scss/**/*.scss'
-        ], ['sass']);
-});
+gulp.task('watch', gulp.series('sass', function() {
+   gulp.watch('components/**/*.scss').on('change',function(){'sass'});
+}));
 
 function customPlumber(errTitle) {
     return plumber({
@@ -42,8 +39,6 @@ gulp.task('fractal:start', function(){
         logger.success(`Fractal server is now running at ${server.url}`);
     });
 });
-
-gulp.task('default', ['fractal:start', 'sass', 'watch']);
 
 /* Scripts */
 
@@ -140,3 +135,8 @@ gulp.task('scripts:uglify', function(done) {
     .pipe(gulp.dest('./public/assets/scripts'));
 });
 /* END UGLIFY of bundled scripts */
+
+/* default now has to be at the end*/
+gulp.task('default', gulp.series(
+  gulp.parallel('fractal:start', 'sass', 'watch')
+));
