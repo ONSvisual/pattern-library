@@ -23,7 +23,6 @@ function sassCompiler(){
   .pipe(sassGlob())
   .pipe(sass())
   .pipe(gulp.dest('public/css'))
-  done()
 }
 
 function watch(){
@@ -51,7 +50,6 @@ function startFractal(){
   return server.start().then(() => {
       logger.success(`Fractal server is now running at ${server.url}`);
   });
-  done()
 }
 
 // gulp.task('fractal:start', function(){
@@ -161,6 +159,8 @@ gulp.task('scripts:uglify', function(done) {
 /* END UGLIFY of bundled scripts */
 
 /* default now has to be at the end*/
-gulp.task('default', gulp.series(
-  startFractal,gulp.parallel(sassCompiler, watch)
-));
+gulp.task('default',
+  gulp.series(
+    startFractal,gulp.parallel(sassCompiler, watch)
+  )
+);
