@@ -4,15 +4,22 @@
 <link href="/css/chosen.css" rel="stylesheet" />
 
 <style>
+
 input.chosen-search-input {
-  text-align:left;
+  text-align:left!important;
   height: 40px;
   font-size: 16px !important;
   text-align: right;
   padding-right:5px !important;
 }
-</style>
 
+input:focus,select:focus {
+ outline:2px solid #f93!important;
+ outline-offset:-1px;
+ z-index:1
+}
+
+</style>
 
 <div class="row">
       <div class="col-sm-8">
@@ -26,13 +33,15 @@ input.chosen-search-input {
 <script>
 console.log('start of script')
 dropdownData=["A","B","C"]
-d3.select("#dropdown2").append("select").attr("id","droppy2").attr("style","width:100%").attr("data-placeholder","Place holder text")
+d3.select("#dropdown2").append("select")
+.attr("id","droppy2").attr("style","width:100%").attr("data-placeholder","Choose a letter")
 d3.select("#droppy2").append("option")
 d3.select("#droppy2").selectAll("p").data(dropdownData).enter().append("option")
 .attr("value", function(d){return d})
 .text(function(d){return d});
 
 $('#droppy2').chosen({
-  allow_single_deselect: true
+  allow_single_deselect: true,
+  no_results_text: "No results found for:"
 })
 </script>
