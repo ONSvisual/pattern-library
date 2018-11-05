@@ -9,17 +9,30 @@ const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
 
-gulp.task('sass',function() {
-    return gulp.src('assets/scss/**/*.scss')
-    .pipe(customPlumber('Error running Sass'))
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(gulp.dest('public/css'))
-});
+// gulp.task('sass',function() {
+//     return gulp.src('assets/scss/**/*.scss')
+//     .pipe(customPlumber('Error running Sass'))
+//     .pipe(sassGlob())
+//     .pipe(sass())
+//     .pipe(gulp.dest('public/css'))
+// });
 
-gulp.task('watch', gulp.series('sass', function() {
-   gulp.watch('components/**/*.scss').on('change',function(){'sass'});
-}));
+function sassCompiler(){
+  return gulp.src('assets/scss/**/*.scss')
+  .pipe(customPlumber('Error running Sass'))
+  .pipe(sassGlob())
+  .pipe(sass())
+  .pipe(gulp.dest('public/css'))
+  done()
+}
+
+function watch(){
+  gulp.watch('components/**/*.scss').on('change',sassCompiler);
+}
+
+// gulp.task('watch', gulp.series('sass', function() {
+//
+// }));
 
 function customPlumber(errTitle) {
     return plumber({
@@ -30,15 +43,26 @@ function customPlumber(errTitle) {
     });
 }
 
-gulp.task('fractal:start', function(){
-    const server = fractal.web.server({
-        sync: true
-    });
-    server.on('error', err => logger.error(err.message));
-    return server.start().then(() => {
-        logger.success(`Fractal server is now running at ${server.url}`);
-    });
-});
+function startFractal(){
+  const server = fractal.web.server({
+      sync: true
+  });
+  server.on('error', err => logger.error(err.message));
+  return server.start().then(() => {
+      logger.success(`Fractal server is now running at ${server.url}`);
+  });
+  done()
+}
+
+// gulp.task('fractal:start', function(){
+//     const server = fractal.web.server({
+//         sync: true
+//     });
+//     server.on('error', err => logger.error(err.message));
+//     return server.start().then(() => {
+//         logger.success(`Fractal server is now running at ${server.url}`);
+//     });
+// });
 
 /* Scripts */
 
@@ -138,5 +162,5 @@ gulp.task('scripts:uglify', function(done) {
 
 /* default now has to be at the end*/
 gulp.task('default', gulp.series(
-  gulp.parallel('fractal:start', 'sass', 'watch')
+  startFractal,gulp.parallel(sassCompiler, watch)
 ));
