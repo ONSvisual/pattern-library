@@ -8,8 +8,11 @@ Clone this repo
 Move into the folder pattern-library
 ```cd pattern-library```
 
-Install fractal 
+Install fractal
 ```npm i -g @frctl/fractal```
 
-Run fractal
-```fractal start --sync```
+Install gulp v4
+```npm install gulp gulp-sass gulp-sass-glob gulp-plumber gulp-notify```
+
+Run gulp
+```gulp```

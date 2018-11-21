@@ -15,4 +15,21 @@
 
 </body>
 
+<!--Scripts-->
+<script src="{{ path '/assets/scripts/bundle.js' }}" charset="utf-8"></script>
+<script src="{{ path '/js/copy.js' }}" charset="utf-8"></script>
+<script src="{{ path '/js/script.js' }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+$('.govuk-checkboxes__input').click(function(){
+    if($(this).is(":checked")) {
+      $('.govuk-checkboxes__conditional').removeClass("govuk-checkboxes__conditional--hidden");
+        } else {
+        $('.govuk-checkboxes__conditional').addClass("govuk-checkboxes__conditional--hidden");
+    }
+});
+</script>
+
 </html>

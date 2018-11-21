@@ -64,7 +64,7 @@ fractal.components.set('statuses', {
 
  const theme = require('@frctl/mandelbrot')({
    nav: ['docs', 'components'],
-   panels: ['notes', 'html', 'info', 'context'],
+   panels: ['notes', 'info'],
    static: {
      mount: 'theme'
    },

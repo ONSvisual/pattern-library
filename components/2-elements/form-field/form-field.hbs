@@ -1,16 +1,165 @@
+<style>
+.govuk-checkboxes__item {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: block;
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding: 0 0 0 40px;
+    clear: left
+}
+
+@media print {
+    .govuk-checkboxes__item {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .govuk-checkboxes__item {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579
+    }
+}
+
+@media print {
+    .govuk-checkboxes__item {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.govuk-checkboxes__item:last-child,
+.govuk-checkboxes__item:last-of-type {
+    margin-bottom: 0
+}
+
+.govuk-checkboxes__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0
+}
+
+.govuk-checkboxes__label {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 8px 15px 5px;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation
+}
+
+.govuk-checkboxes__hint {
+    display: block;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.govuk-checkboxes__input+.govuk-checkboxes__label::before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid currentColor;
+    background: transparent
+}
+
+.govuk-checkboxes__input+.govuk-checkboxes__label::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    width: 23px;
+    height: 10px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border: solid;
+    border-width: 0 0 5px 5px;
+    border-top-color: transparent;
+    opacity: 0;
+    background: transparent
+}
+
+.govuk-checkboxes__input:focus+.govuk-checkboxes__label::before {
+    outline: 3px solid transparent;
+    outline-offset: 3px;
+    -webkit-box-shadow: 0 0 0 3px #ffbf47;
+    box-shadow: 0 0 0 3px #ffbf47
+}
+
+.govuk-checkboxes__input:checked+.govuk-checkboxes__label::after {
+    opacity: 1
+}
+
+.govuk-checkboxes__input:disabled,
+.govuk-checkboxes__input:disabled+.govuk-checkboxes__label {
+    cursor: default
+}
+
+.govuk-checkboxes__input:disabled+.govuk-checkboxes__label {
+    opacity: .5
+}
+
+.govuk-checkboxes__conditional {
+    margin-bottom: 15px;
+    margin-left: 18px;
+    padding-left: 33px;
+    border-left: 4px solid #bfc1c3
+}
+
+@media (min-width: 40.0625em) {
+    .govuk-checkboxes__conditional {
+        margin-bottom: 20px
+    }
+}
+
+.js-enabled .govuk-checkboxes__conditional--hidden {
+    display: none
+}
+
+.govuk-checkboxes__conditional>:last-child {
+    margin-bottom: 0
+}
+</style>
+
 <div class="row">
-  <div class="col-sm-4">
-    <h3>Select Field<h3>
-  <label for="select-1" class="m-top block margin-bottom--1">Select an option</label>
-        <select name="select-1" id="select-1" class="select">
-            <option value="value-1">First option</option>
-            <option value="value-2">Second option</option>
-            <option value="value-3">Third option</option>
-            <option value="value-4">Fourth option</option>
-            <option value="value-5">Fifth option</option>
-            <option value="value-6">Sixth option</option>
-        </select>
-  </div>
+      <div class="col-sm-8">
+        <h3>Select Field<h3>
+          <div style="display:flex;">
+        <div class="input-value">
+          <form class="input">
+            <div class="input-window">
+            <input style="    border: 1px solid #414042;border-radius: 3px;text-align: right;height:40px;" id="earnings-input" type="number" min="0" value="0" tabindex="0">
+            </div>
+          </form>
+        </div>
+        <div id="dropdown2" style="margin-left: 5px;">
+          <select id="period" class="dropdown" style="">
+            <option value="Per month">Per month</option>
+            <option value="Per week">Per week</option>
+            <option value="Per year">Per year</option>
+          </select>
+        </div>
+      </div>
+      </div>
 </div>
 <div class="row m-top">
   <div class="col-sm-4">
@@ -18,4 +167,94 @@
     <label for="select-1" class="m-top block margin-bottom--1">Your name</label>
 <input class="input input--StringField " value="" placeholder="" id="input-date-range-from-day" name="date-range-from-day">
 </div>
+</div>
+
+
+<div class="row">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+<h1>Check boxes</h1>
+
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            Waste from animal carcasses
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Waste from mines or quarries
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Farm or agricultural waste
+          </label>
+        </div>
+      </div>
+    </fieldset>
+</div>
+
+<div class="row js-enabled">
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          How would you like to be contacted?
+        </h1>
+      </legend>
+      <span id="citizenship-conditional-hint" class="govuk-hint">
+        Select all options that are relevant to you.
+      </span>
+      <div class="govuk-checkboxes" data-module="checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-1 test" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+            Email
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-email">
+              Email address
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email">
+          </div>
+
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+            Phone
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-phone">
+              Phone number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+          </div>
+
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+            Text message
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              Mobile phone number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+          </div>
+
+        </div>
+      </div>
+    </fieldset>
+  </div>
 </div>

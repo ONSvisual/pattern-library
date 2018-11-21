@@ -7,7 +7,7 @@ context:
     text-sec-origin: Input Button - No Shadow
     text-settings: Settings button
     text-location: Location button
-    text-play: Play button
+    text-play: Play button interactive
     text-pause: Pause button
     text-next: Next button
     text-prev: Previous button
