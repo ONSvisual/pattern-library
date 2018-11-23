@@ -1,0 +1,22 @@
+.textarea{
+  padding: 1rem;
+color: inherit;
+border: 2px solid #1b5f97;
+border-radius: 0px;
+font-size: 1.2em;
+max-width: 100%;
+}
+
+.textarea-error{
+  border: 3px solid #D32F2F;
+}
+#char-count{
+  font-weight: bold;
+}
+textarea:focus{
+  outline: none;
+box-shadow: 0 0 0 30px #fe781f;
+}
+.textarea-text{
+  margin-top: 0;
+}

@@ -25,7 +25,7 @@ code{
 .hljs-literal,
 .hljs-variable,
 .hljs-template-variable,
-.hljs-attr, 
+.hljs-attr,
 .hljs-name,
 .hljs-attribute {
   color: #008080; }
@@ -168,9 +168,7 @@ code{
     position: absolute;
     color: #fff;
 }
-input[type=checkbox], input[type=radio] {
-      display: none;
-}
+
 .tgl+.tgl-btn:after {
   left: 130px;
 top: -37px;

@@ -4,6 +4,16 @@ body {
 h1, h2, h3{
   margin: 0;
 }
+.h3{
+font-weight: bold;
+    font-size: 21px;
+        padding: 3px 0 5px 0;
+        margin: 0;
+}
+legend{
+  border:0px;
+  margin: 0;
+}
 
 /*Margins*/
 .m-top {
@@ -19,6 +29,13 @@ h1, h2, h3{
 @import "../../components/2-elements/button/button.scss";
 @import "../../components/1-styles/colour/colour.scss";
 @import "../../components/1-styles/grids/grids.scss";
+@import "../../components/2-elements/select/select.scss";
+@import "../../components/2-elements/checkbox/checkbox.scss";
+@import "../../components/2-elements/radio/radio.scss";
+@import "../../components/2-elements/text/text.scss";
+@import "../../components/2-elements/fieldset/fieldset.scss";
+@import "../../components/2-elements/date/date.scss";
+@import "../../components/2-elements/textarea/textarea.scss";
+@import "../../components/2-elements/multiselect/multiselect.scss";
+@import "../../components/2-elements/error_message/error_message.scss";
 @import "../../docs/index.scss";
-
-@import "../../components/2-elements/form-field/field.scss";

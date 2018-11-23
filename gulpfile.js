@@ -1,5 +1,4 @@
 'use strict';
-
 const gulp         = require('gulp');
 const fractal      = require('./fractal.js');
 const logger       = fractal.cli.console;
@@ -8,19 +7,26 @@ const sassGlob     = require('gulp-sass-glob');
 const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
-
-gulp.task('sass',function() {
-    return gulp.src('assets/scss/**/*.scss')
-    .pipe(customPlumber('Error running Sass'))
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(gulp.dest('public/css'))
-});
-
-gulp.task('watch', gulp.series('sass', function() {
-   gulp.watch('components/**/*.scss').on('change',function(){'sass'});
-}));
-
+// gulp.task('sass',function() {
+//     return gulp.src('assets/scss/**/*.scss')
+//     .pipe(customPlumber('Error running Sass'))
+//     .pipe(sassGlob())
+//     .pipe(sass())
+//     .pipe(gulp.dest('public/css'))
+// });
+function sassCompiler(){
+  return gulp.src('assets/scss/**/*.scss')
+  .pipe(customPlumber('Error running Sass'))
+  .pipe(sassGlob())
+  .pipe(sass())
+  .pipe(gulp.dest('public/css'))
+}
+function watch(){
+  gulp.watch('components/**/*.scss').on('change',sassCompiler);
+}
+// gulp.task('watch', gulp.series('sass', function() {
+//
+// }));
 function customPlumber(errTitle) {
     return plumber({
         errorHandler: notify.onError({
@@ -29,26 +35,30 @@ function customPlumber(errTitle) {
         })
     });
 }
-
-gulp.task('fractal:start', function(){
-    const server = fractal.web.server({
-        sync: true
-    });
-    server.on('error', err => logger.error(err.message));
-    return server.start().then(() => {
-        logger.success(`Fractal server is now running at ${server.url}`);
-    });
-});
-
+function startFractal(){
+  const server = fractal.web.server({
+      sync: true
+  });
+  server.on('error', err => logger.error(err.message));
+  return server.start().then(() => {
+      logger.success(`Fractal server is now running at ${server.url}`);
+  });
+}
+// gulp.task('fractal:start', function(){
+//     const server = fractal.web.server({
+//         sync: true
+//     });
+//     server.on('error', err => logger.error(err.message));
+//     return server.start().then(() => {
+//         logger.success(`Fractal server is now running at ${server.url}`);
+//     });
+// });
 /* Scripts */
-
 gulp.task('scripts:clean', function() {
   return del(['public/assets/scripts']);
 });
-
 const bundleScripts = watch => {
   let cache;
-
   var bundler = function() {
     var b = browserify()
       .transform('rollupify', {
@@ -57,10 +67,8 @@ const bundleScripts = watch => {
             if (message.code === 'THIS_IS_UNDEFINED') {
               return;
             }
-
             console.error(message);
           },
-
           plugins: [
             nodeResolve({
               jsnext: true,
@@ -91,7 +99,6 @@ const bundleScripts = watch => {
           if(err) {
             throw err;
           }
-
           // create a new vinyl file with bundle contents
           // and push it to the stream
           stream.push(new vinyl({
@@ -103,7 +110,6 @@ const bundleScripts = watch => {
       });
     return stream;
   };
-
   return gulp.src(['./assets/js/polyfills.js', './assets/js/components.js'])
     .pipe(bundler())
     .on('error', function(err) {
@@ -112,9 +118,7 @@ const bundleScripts = watch => {
     })
     .pipe(gulp.dest('public/assets/scripts'));
 };
-
 gulp.task('scripts:bundle', () => bundleScripts(false));
-
 /* UGLIFY of bundled scripts
     - run this after all scripts are bundled to produce a minified version
 */
@@ -135,8 +139,9 @@ gulp.task('scripts:uglify', function(done) {
     .pipe(gulp.dest('./public/assets/scripts'));
 });
 /* END UGLIFY of bundled scripts */
-
 /* default now has to be at the end*/
-gulp.task('default', gulp.series(
-  gulp.parallel('fractal:start', 'sass', 'watch')
-));
+gulp.task('default',
+  gulp.series(
+    startFractal,gulp.parallel(sassCompiler, watch)
+  )
+);

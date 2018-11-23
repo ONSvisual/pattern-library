@@ -16,20 +16,28 @@
 </body>
 
 <!--Scripts-->
-<script src="{{ path '/assets/scripts/bundle.js' }}" charset="utf-8"></script>
+<!--<script src="{{ path '/assets/scripts/bundle.js' }}" charset="utf-8"></script>-->
 <script src="{{ path '/js/copy.js' }}" charset="utf-8"></script>
 <script src="{{ path '/js/script.js' }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
 <script>
-$('.govuk-checkboxes__input').click(function(){
-    if($(this).is(":checked")) {
-      $('.govuk-checkboxes__conditional').removeClass("govuk-checkboxes__conditional--hidden");
-        } else {
-        $('.govuk-checkboxes__conditional').addClass("govuk-checkboxes__conditional--hidden");
-    }
-});
+$('.input-group > *').focus(function() {
+        $('.input-group').addClass('focus');
+    })
+    .blur(function() {
+        $('.input-group').removeClass('focus');
+    });
 </script>
 
+<script>
+var maxLength = 100;
+$('textarea').keyup(function() {
+  var length = $(this).val().length;
+  var length = maxLength-length;
+  $('#char-count').text(length);
+});
+</script>
 </html>
