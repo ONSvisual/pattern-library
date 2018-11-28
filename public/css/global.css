@@ -668,6 +668,9 @@ input[type=checkbox]:focus {
   display: none;
   clear: both; }
 
+.legend-label {
+  margin-bottom: 20px; }
+
 .reveal {
   padding-left: 0; }
 

@@ -7,21 +7,9 @@ const sassGlob     = require('gulp-sass-glob');
 const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
-// gulp.task('sass',function() {
-//     return gulp.src('assets/scss/**/*.scss')
-//     .pipe(customPlumber('Error running Sass'))
-//     .pipe(sassGlob())
-//     .pipe(sass())
-//     .pipe(gulp.dest('public/css'))
-// });
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
+
 function sassCompiler(){
   return gulp.src('assets/scss/**/*.scss')
   .pipe(customPlumber('Error running Sass'))
@@ -29,14 +17,12 @@ function sassCompiler(){
   .pipe(sass())
   .pipe(gulp.dest('public/css'))
 }
-<<<<<<< HEAD
 function watch(){
   gulp.watch('components/**/*.scss').on('change',sassCompiler);
 }
 // gulp.task('watch', gulp.series('sass', function() {
 //
 // }));
-=======
 
 function watch(){
   gulp.watch('components/**/*.scss').on('change',sassCompiler);
@@ -46,7 +32,6 @@ function watch(){
 //
 // }));
 
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
 function customPlumber(errTitle) {
     return plumber({
         errorHandler: notify.onError({
@@ -55,10 +40,6 @@ function customPlumber(errTitle) {
         })
     });
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
 function startFractal(){
   const server = fractal.web.server({
       sync: true
@@ -68,10 +49,7 @@ function startFractal(){
       logger.success(`Fractal server is now running at ${server.url}`);
   });
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
 // gulp.task('fractal:start', function(){
 //     const server = fractal.web.server({
 //         sync: true
@@ -81,10 +59,6 @@ function startFractal(){
 //         logger.success(`Fractal server is now running at ${server.url}`);
 //     });
 // });
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d1942b3eb96c371c04d197e0124c722ab484e38
 /* Scripts */
 gulp.task('scripts:clean', function() {
   return del(['public/assets/scripts']);
