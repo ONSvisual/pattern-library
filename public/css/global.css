@@ -813,7 +813,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 30px #fe781f; }
+  box-shadow: 0 0 0 3px #fe781f; }
 
 .textarea-text {
   margin-top: 0; }
