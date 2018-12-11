@@ -1,0 +1,59 @@
+<script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
+<script src="/js/chosen.jquery.js"></script>
+<link href="/css/chosen.css" rel="stylesheet" />
+
+
+<style>
+
+input.chosen-search-input {
+  text-align:left!important;
+  height: 40px;
+  font-size: 16px !important;
+  text-align: right;
+  padding-right:5px !important;
+}
+
+input:focus,select:focus {
+ /* outline:2px solid #f93!important; */
+ outline-offset:-1px;
+ z-index:1
+}
+
+</style>
+
+<div class="row">
+      <div class="col-sm-8">
+
+<h3>Chosen Dropdown</h3>
+<div id="dropdown2"></div>
+
+</div>
+</div>
+
+<script>
+console.log('start of script')
+dropdownData=["ABCDEF","B","C","D","E","F"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:100%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
+
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 3
+})
+</script>
