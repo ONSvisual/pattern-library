@@ -4,23 +4,6 @@
 <link href="/css/chosen.css" rel="stylesheet" />
 
 
-<style>
-
-input.chosen-search-input {
-  text-align:left!important;
-  height: 40px;
-  font-size: 16px !important;
-  text-align: right;
-  padding-right:5px !important;
-}
-
-input:focus,select:focus {
- /* outline:2px solid #f93!important; */
- outline-offset:-1px;
- z-index:1
-}
-
-</style>
 
 <div class="row">
       <div class="col-sm-8">
@@ -32,6 +15,7 @@ input:focus,select:focus {
 </div>
 
 <script>
+colors=["#206095", "#0F8243", "#00A5A1"]
 console.log('start of script')
 dropdownData=["ABCDEF","B","C","D","E","F"]
 d3.select("#dropdown2")
@@ -40,6 +24,7 @@ d3.select("#dropdown2")
   .attr("style", "width:100%")
   .attr("multiple", "true")
   .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
 d3.select("#droppy2")
   .append("option")
 d3.select("#droppy2")
@@ -55,5 +40,6 @@ $('#droppy2').chosen({
   allow_single_deselect: true,
   no_results_text: "No results found for:",
   max_selected_options: 3
+
 })
 </script>
