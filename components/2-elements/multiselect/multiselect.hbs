@@ -8,7 +8,7 @@
 <div class="row">
       <div class="col-sm-8">
 
-<h3>Chosen Dropdown</h3>
+<h3>Start typing or click an option</h3>
 <div id="dropdown2"></div>
 
 </div>
@@ -21,7 +21,7 @@ dropdownData=["ABCDEF","B","C","D","E","F"]
 d3.select("#dropdown2")
   .append("select")
   .attr("id","droppy2")
-  .attr("style", "width:100%")
+  .attr("style", "width:50%")
   .attr("multiple", "true")
   .attr("data-placeholder", "Choose up to 3 letters")
   .style("font-size", "23px")
@@ -39,7 +39,8 @@ d3.select("#droppy2")
 $('#droppy2').chosen({
   allow_single_deselect: true,
   no_results_text: "No results found for:",
-  max_selected_options: 3
+  max_selected_options: 3,
+  search: true
 
 })
 </script>
