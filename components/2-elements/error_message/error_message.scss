@@ -3,13 +3,13 @@
 margin: 0;
 }
 
-.error_text a{
+.error--text a{
   color: #D32F2F;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.error_message{
+.error--message{
   padding: 13px;
 border: solid 3px #D32F2F;
 margin-bottom: 30px;
@@ -20,7 +20,7 @@ margin-top: 0;
 font-size: 1.2em;
 }
 }
-.error_box{
+.error--box{
   padding: 0 0 0 10px;
   border-left: 3px solid #D32F2F;
 }
