@@ -816,10 +816,54 @@ input[type=number]::-webkit-outer-spin-button {
 
 textarea:focus {
   outline: none;
+<<<<<<< HEAD
   box-shadow: 0 0 0 5px #fe781f; }
+=======
+  box-shadow: 0 0 0 3px #fe781f; }
+>>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
 
 .textarea-text {
   margin-top: 0; }
+
+input.chosen-search-input {
+  text-align: left !important;
+  height: 40px;
+  font-size: 16px !important;
+  text-align: right;
+  padding-right: 5px !important; }
+
+input:focus, select:focus {
+  outline-offset: -1px;
+  z-index: 1; }
+
+.search-choice:nth-child(1) {
+  background-color: #206095 !important; }
+
+.search-choice:nth-child(2) {
+  background-color: #0F8243 !important; }
+
+.search-choice:nth-child(3) {
+  background-color: #00A5A1 !important; }
+
+.search-choice:nth-child(4) {
+  background-color: #e78ac3 !important; }
+
+.search-choice:nth-child(5) {
+  background-color: #a6d854 !important; }
+
+.search-choice:nth-child(6) {
+  background-color: #666 !important; }
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  position: relative;
+  margin: 3px 3px 3px 5px;
+  padding: 3px 20px 3px 5px;
+  background-color: #0084d1;
+  background-clip: padding-box;
+  color: #fff !important;
+  font-weight: 700 !important;
+  line-height: 20px;
+  cursor: default; }
 
 .error {
   color: #D32F2F;
