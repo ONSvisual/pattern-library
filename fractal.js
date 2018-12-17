@@ -82,7 +82,7 @@ fractal.components.set('statuses', {
    },
    styles: [
      'default',
-     '/assets/css/patternlib.css', // Used for eQ Pattern Library specific styles e.g. Colour swatches
+     '/assets/scss/global.scss', // Used for eQ Pattern Library specific styles e.g. Colour swatches
    ],
    scripts: ['/assets/scripts/bundle.js', 'default']
  });
