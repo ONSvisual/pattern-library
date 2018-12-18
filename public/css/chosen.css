@@ -323,7 +323,7 @@ white-space: nowrap;
   display: block;
   width: 12px;
   height: 12px;
-  background: url("../public/assets/img/chosen-sprite-sm-white.png") -42px 1px no-repeat;
+  background: url("/assets/img/chosen-sprite-sm-white.png") -42px 1px no-repeat;
   font-size: 1px;
 }
 
