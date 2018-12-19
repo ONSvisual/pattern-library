@@ -4,10 +4,15 @@
   height: 45px;
   color: inherit;
   border: 2px solid #3b7a9e;
-box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 0px;
   font-size: 1.2em;
   transition: border-color 200ms ease-in;
+}
+input:focus, select:focus {
+  outline: 2px solid #f93!important;
+  box-sizing: border-box;
+  outline-offset: -2px!important;
 }
 
 .pound {
@@ -26,7 +31,7 @@ box-sizing: border-box;
 }
 .spinner-input {
     text-align: right;
-    width: 100%;
+    width: 98.5%;
     height:41px;
 }
 .spinner-button {

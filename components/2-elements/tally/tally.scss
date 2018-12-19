@@ -7,7 +7,6 @@
   font-size: 1.2em;
   transition: border-color 200ms ease-in;
 }
-
 .pound {
     display: inline;
     height: 40px;
@@ -37,7 +36,8 @@
 }
 .spinner-input {
  text-align:right;
- width:100%
+ width:98.5%
+ outline: 3px solid #f93;
 }
 @media screen and (max-width:600px) {
  .spinner-inner {
