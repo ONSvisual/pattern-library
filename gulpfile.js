@@ -8,10 +8,9 @@ const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
 
-<<<<<<< HEAD
 
 
-=======
+
 // gulp.task('sass',function() {
 //     return gulp.src('assets/scss/**/*.scss')
 //     .pipe(customPlumber('Error running Sass'))
@@ -20,7 +19,6 @@ const path         = require('path');
 //     .pipe(gulp.dest('public/css'))
 // });
 
->>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
 function sassCompiler(){
   return gulp.src('assets/scss/**/*.scss')
   .pipe(customPlumber('Error running Sass'))
@@ -28,16 +26,13 @@ function sassCompiler(){
   .pipe(sass())
   .pipe(gulp.dest('public/css'))
 }
-<<<<<<< HEAD
+
 function watch(){
   gulp.watch('components/**/*.scss').on('change',sassCompiler);
 }
 // gulp.task('watch', gulp.series('sass', function() {
 //
 // }));
-=======
-
->>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
 
 function watch(){
   gulp.watch('components/**/*.scss').on('change',sassCompiler);
@@ -47,10 +42,8 @@ function watch(){
 //
 // }));
 
-<<<<<<< HEAD
-=======
 
->>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
+
 function customPlumber(errTitle) {
     return plumber({
         errorHandler: notify.onError({
@@ -59,10 +52,8 @@ function customPlumber(errTitle) {
         })
     });
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
+
 function startFractal(){
   const server = fractal.web.server({
       sync: true
@@ -82,10 +73,8 @@ function startFractal(){
 //         logger.success(`Fractal server is now running at ${server.url}`);
 //     });
 // });
-<<<<<<< HEAD
-=======
 
->>>>>>> b28a4ce1b3dda69cbf5ec6d25d578a92ef89703a
+
 /* Scripts */
 gulp.task('scripts:clean', function() {
   return del(['public/assets/scripts']);
