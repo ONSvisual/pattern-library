@@ -335,7 +335,7 @@ top: -37px;
 
 .btn--green {
   background-color: #008e49 !important;
-  box-shadow: 0 3px 0 0 #015f31;
+  // box-shadow: 0 3px 0 0 #015f31;
 
   &:hover{
     background-color: #00784a !important;
@@ -345,7 +345,7 @@ top: -37px;
 
 .btn--blue {
   background-color: $blue !important;
-  box-shadow: 0 3px 0 0 #072d49;
+  // box-shadow: 0 3px 0 0 #072d49;
 
   &:hover{
     background-color: #124d80 !important;
@@ -374,8 +374,8 @@ top: -37px;
   }
 
 &:focus{
-  outline: 3px solid #fe781f;
-  box-shadow: 0px !important;
+  outline: none;
+  box-shadow: 0px -1px 0 3px #fe781f;
   color: white;
       outline-offset: 0px;
 }

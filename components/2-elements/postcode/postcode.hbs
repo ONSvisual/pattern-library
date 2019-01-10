@@ -25,24 +25,32 @@
     font-size: 1.3em;
 }
 
-/* .focus{
 
-} */
 .input-group{
       min-width: 300px;
 }
 input:focus{
-  outline: 3px solid #f93;
+  outline: 3px solid #fe781f;
+  position: relative;
+}
+.button{
+  background: none;
+    border: 0;
+    padding: 4px;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 28px;
+    width: 28px;
 }
 </style>
 
 <div class="col-xs-3" style="margin-top: 20px;">
   <div class="input-group stylish-input-group">
     <input type="text" class="search-control"  placeholder="Search" >
-      <span class="input-group-addon search-group">
+      <div class="input-group-addon search-group">
         <button type="submit" style="background: none;border: 0;">
           <span class="glyphicon glyphicon-search"></span>
         </button>
-      </span>
+      </div>
     </div>
 </div>
