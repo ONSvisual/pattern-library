@@ -1,4 +1,5 @@
 <style>
+<<<<<<< HEAD
 .input-tally{
   padding: 1rem;
   height: 45px;
@@ -9,13 +10,29 @@
   border-radius: 0px;
   font-size: 1.2em;
   transition: border-color 200ms ease-in;
-}
-input:focus, select:focus {
-  outline: 2px solid #f93!important;
-  box-sizing: border-box;
-  outline-offset: -2px!important;
+=======
+
+
+.minus{
+  z-index: 900;
+>>>>>>> 1c9be1cd89e5c7df4521b83f85cb2a3815baf9b3
 }
 
+button#plus.plus{
+  float:left;
+}
+button {
+  width: 18.6%;
+  height: 30px;
+  float: left;
+  background-color: #1b5f97;
+  color: #fff;
+  border: 2px solid #1b5f97;
+  /* box-sizing: border-box; */
+  font-size: 27px;
+  text-align: center;
+
+<<<<<<< HEAD
 .pound {
     display: inline;
     height: 41px;
@@ -33,16 +50,31 @@ input:focus, select:focus {
     text-align: center;
     width: 98.5%;
     height:41px;
+=======
 }
-.spinner-button {
- padding:10px 16px;
- text-decoration:none;
- color:#fff
+
+button:focus{
+  outline: 3px solid #f93;
+>>>>>>> 1c9be1cd89e5c7df4521b83f85cb2a3815baf9b3
 }
-.spinner-inner {
- float:left;
- width:calc(100% - 82px)
+
+.typenumber {
+  width: 61.5%;
+  height: 29.5px;
+  float: left;
+  border: solid transparent;
+  box-sizing: border-box;
+  text-align: center;
+  color: #1b5f97;
+  z-index: -1;
+  margin-left:2px;
 }
+
+.typenumber:focus{
+ outline: 3px solid #f93;
+ position: relative;
+}
+<<<<<<< HEAD
 .spinner-input {
  text-align:center;
  width:100%;
@@ -54,12 +86,18 @@ input:focus, select:focus {
 .pound{
   cursor: pointer;
       -webkit-appearance: listitem;
+=======
+.borderbox{
+  border: 2px solid #1b5f97;
+  height:33.5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  float:left;
+>>>>>>> 1c9be1cd89e5c7df4521b83f85cb2a3815baf9b3
 }
-</style>
 
-<div class="row">
-<div class="col-sm-2">
 
+<<<<<<< HEAD
   <!-- <div class="input-value"> -->
   <form class="input-tally" style="padding:0px!important;">
   <button class="pound spinner-down" type="button" id="spinner-down">
@@ -75,21 +113,31 @@ input:focus, select:focus {
   </button>
   </form>
   <!-- </div> -->
+=======
+>>>>>>> 1c9be1cd89e5c7df4521b83f85cb2a3815baf9b3
 
+</style>
+
+<div class="row">
+  <div class="borderbox">
+    <div><button type="button" id="minus" class="minus">-</button></div>
+    <div><input type="text" id="typenumber" value=0 class="typenumber"></div>
+      <div><button type="button" id="plus" class="plus">+</button></div>
+    <!-- </div> -->
+    </div>
 </div>
-</div>
 
 
 
-<script>
-document.getElementById("spinner-up").addEventListener("click", function(){
-    var employees=document.getElementById("employees").value
-    document.getElementById("employees").value=+employees+1
-  })
-document.getElementById("spinner-down").addEventListener("click", function(){
-    if(document.getElementById("employees").value>0){
-      var employees=document.getElementById("employees").value
-      document.getElementById("employees").value=+employees-1
-      }
-  })
-</script>
+    <script>
+      document.getElementById("plus").addEventListener("click", function() {
+        var typenumber = document.getElementById("typenumber").value
+        document.getElementById("typenumber").value = +typenumber + 1
+      })
+      document.getElementById("minus").addEventListener("click", function() {
+        if (document.getElementById("typenumber").value > 0) {
+          var typenumber = document.getElementById("typenumber").value
+          document.getElementById("typenumber").value = +typenumber - 1
+        }
+      })
+    </script>
