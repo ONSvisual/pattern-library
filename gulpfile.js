@@ -8,17 +8,6 @@ const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
 
-
-
-
-// gulp.task('sass',function() {
-//     return gulp.src('assets/scss/**/*.scss')
-//     .pipe(customPlumber('Error running Sass'))
-//     .pipe(sassGlob())
-//     .pipe(sass())
-//     .pipe(gulp.dest('public/css'))
-// });
-
 function sassCompiler(){
   return gulp.src('assets/scss/**/*.scss')
   .pipe(customPlumber('Error running Sass'))
@@ -26,7 +15,6 @@ function sassCompiler(){
   .pipe(sass())
   .pipe(gulp.dest('public/css'))
 }
-
 function watch(){
   gulp.watch('components/**/*.scss').on('change',sassCompiler);
 }
@@ -41,7 +29,6 @@ function watch(){
 // gulp.task('watch', gulp.series('sass', function() {
 //
 // }));
-
 
 
 function customPlumber(errTitle) {
@@ -52,7 +39,6 @@ function customPlumber(errTitle) {
         })
     });
 }
-
 
 function startFractal(){
   const server = fractal.web.server({
@@ -73,7 +59,6 @@ function startFractal(){
 //         logger.success(`Fractal server is now running at ${server.url}`);
 //     });
 // });
-
 
 /* Scripts */
 gulp.task('scripts:clean', function() {

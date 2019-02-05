@@ -25,14 +25,14 @@
     font-size: 1.3em;
 }
 
-.focus{
-  outline: 3px solid #f93;
-}
+/* .focus{
+
+} */
 .input-group{
       min-width: 300px;
 }
 input:focus{
-  outline: none;
+  outline: 3px solid #fe781f;
 }
 </style>
 
@@ -41,6 +41,7 @@ input:focus{
     <input type="text" class="search-control"  placeholder="Search" >
       <span class="input-group-addon search-group">
         <button type="submit" style="background: none;border: 0;">
+          <span class="visuallyhidden">Search</span>
           <span class="glyphicon glyphicon-search"></span>
         </button>
       </span>

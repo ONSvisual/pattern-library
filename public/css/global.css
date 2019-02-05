@@ -24,79 +24,6 @@ legend {
   margin-bottom: 25px; }
 
 /*Margins end*/
-code {
-  padding: 0; }
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8; }
-
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic; }
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333; }
-
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-attr,
-.hljs-name,
-.hljs-attribute {
-  color: #008080; }
-
-.hljs-string,
-.hljs-doctag, .hljs-value {
-  color: #d14; }
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900; }
-
-.hljs-subst {
-  font-weight: normal; }
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458; }
-
-.hljs-regexp,
-.hljs-link {
-  color: #009926; }
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073; }
-
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3; }
-
-.hljs-meta {
-  color: #999;
-  font-weight: bold; }
-
-.hljs-deletion {
-  background: #fdd; }
-
-.hljs-addition {
-  background: #dfd; }
-
-.hljs-emphasis {
-  font-style: italic; }
-
-.hljs-strong {
-  font-weight: bold; }
-
 .tgl-play:checked + .tgl-btn {
   background: #008e49; }
 
@@ -344,12 +271,11 @@ code {
 
 .btn {
   position: relative;
-  padding: 12px 18px;
-  margin: 0;
+  padding: 7px 15px;
+  margin: 0 0 20px;
   line-height: normal;
   color: #fff;
-  font-size: 1.5em !important;
-  font-size: 1rem;
+  font-size: 1.3em !important;
   font-weight: 600;
   border-radius: 0px !important;
   display: inline-block;
@@ -594,8 +520,7 @@ p {
     .input {
       width: 100%; } }
   .input:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px #fe781f; }
+    outline: 3px solid #fe781f; }
 
 .input__helper {
   font-size: 0.8rem;
@@ -655,8 +580,7 @@ input:checked ~ .field__other {
   bottom: 8px; }
 
 input[type=checkbox]:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #fe781f; }
+  outline: 3px solid #fe781f; }
 
 .field__item {
   margin-bottom: 15px; }
@@ -705,8 +629,7 @@ input[type=checkbox]:focus {
       border: solid white; }
 
 input[type=radio]:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #fe781f; }
+  outline: 3px solid #fe781f; }
 
 .label {
   color: #000 !important;
@@ -815,9 +738,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold; }
 
 textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #fe781f;
-  box-shadow: 0 0 0 3px #fe781f; }
+  outline: none; }
 
 .textarea-text {
   margin-top: 0; }
@@ -830,7 +751,7 @@ input.chosen-search-input {
   padding-right: 5px !important; }
 
 input:focus, select:focus {
-  outline-offset: -1px;
+  outline-offset: -2px;
   z-index: 1; }
 
 .search-choice:nth-child(1) {
@@ -866,6 +787,28 @@ input:focus, select:focus {
   color: #D32F2F;
   margin: 0; }
 
+.error_text a {
+  color: #D32F2F;
+  font-weight: bold;
+  text-decoration: underline; }
+
+.error_message {
+  padding: 13px;
+  border: solid 3px #D32F2F;
+  margin-bottom: 30px; }
+  .error_message p {
+    padding: 0;
+    margin-top: 0;
+    font-size: 1.2em; }
+
+.error_box {
+  padding: 0 0 0 10px;
+  border-left: 3px solid #D32F2F; }
+
+.error {
+  color: #D32F2F;
+  margin: 0; }
+
 .error--text a {
   color: #D32F2F;
   font-weight: bold;
@@ -883,6 +826,38 @@ input:focus, select:focus {
 .error--box {
   padding: 0 0 0 10px;
   border-left: 3px solid #D32F2F; }
+
+.btn--loader {
+  transition: color 300ms ease-out;
+  position: relative; }
+  .btn--loader::after {
+    display: block;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url("../img/loader.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5rem;
+    transition: opacity 300ms ease-out 200ms;
+    pointer-events: none; }
+  .btn--loader.is-loading {
+    color: transparent; }
+    .btn--loader.is-loading::after {
+      opacity: 1; }
+
+.btn-group .btn-group__btn {
+  display: inline-block;
+  margin-right: 1rem; }
+  .btn-group .btn-group__btn:last-of-type {
+    margin-right: 0; }
 
 .divider {
   border-bottom: 1px solid #999999; }

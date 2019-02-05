@@ -16,8 +16,7 @@ p{
   }
 
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px #fe781f;
+    outline: 3px solid #fe781f;
     }
 }
 

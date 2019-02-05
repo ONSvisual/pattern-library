@@ -1,3 +1,6 @@
+$color-primary: #0F8243;
+$color-white: #FFFFFF;
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -24,6 +27,8 @@ legend{
 .marg-bot-25{
   margin-bottom: 25px;
 }
+
+
 /*Margins end*/
 @import "/components/**/*.scss";
 @import "../../components/2-elements/button/button.scss";
@@ -37,5 +42,7 @@ legend{
 @import "../../components/2-elements/date/date.scss";
 @import "../../components/2-elements/textarea/textarea.scss";
 @import "../../components/2-elements/multiselect/multiselect.scss";
+@import "../../components/2-elements/error_summary/error_summary.scss";
 @import "../../components/2-elements/error_message/error_message.scss";
+@import "../../components/button_sdc/_buttons.scss";
 @import "../../docs/index.scss";

@@ -1,0 +1,95 @@
+<style>
+.input-tally{
+  padding: 1rem;
+  height: 45px;
+  width: 135px;
+  color: inherit;
+  border: 2px solid #206095;
+  box-sizing: border-box;
+  border-radius: 0px;
+  font-size: 1.2em;
+  transition: border-color 200ms ease-in;
+}
+input:focus, select:focus {
+  outline: 2px solid #f93!important;
+  box-sizing: border-box;
+  outline-offset: -2px!important;
+}
+
+.pound {
+    display: inline;
+    height: 41px;
+    width: 41px;
+    font-size: 21px;
+    background-color: #206095;
+    color: #fff;
+    text-align: center;
+    float: left;
+    font-weight: 600;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.spinner-input {
+    text-align: center;
+    width: 98.5%;
+    height:41px;
+}
+.spinner-button {
+ padding:10px 16px;
+ text-decoration:none;
+ color:#fff
+}
+.spinner-inner {
+ float:left;
+ width:calc(100% - 82px)
+}
+.spinner-input {
+ text-align:center;
+ width:100%;
+ font-size: 1em;
+}
+.pound .fas{
+  font-size: .8em;
+}
+.pound{
+  cursor: pointer;
+      -webkit-appearance: listitem;
+}
+</style>
+
+<div class="row">
+<div class="col-sm-2">
+
+  <!-- <div class="input-value"> -->
+  <form class="input-tally" style="padding:0px!important;">
+  <button class="pound spinner-down" type="button" id="spinner-down">
+    <span class="visuallyhidden">Minus</span>
+    <i class="fas fa-minus"></i>
+  </button>
+  <div class="spinner-inner">
+  <input class="spinner-input" id="employees" type="number" min="0" value="0">
+  </div>
+  <button class="pound spinner-up" type="button" id="spinner-up">
+    <span class="visuallyhidden">Plus</span>
+    <i class="fas fa-plus"></i>
+  </button>
+  </form>
+  <!-- </div> -->
+
+</div>
+</div>
+
+
+
+<script>
+document.getElementById("spinner-up").addEventListener("click", function(){
+    var employees=document.getElementById("employees").value
+    document.getElementById("employees").value=+employees+1
+  })
+document.getElementById("spinner-down").addEventListener("click", function(){
+    if(document.getElementById("employees").value>0){
+      var employees=document.getElementById("employees").value
+      document.getElementById("employees").value=+employees-1
+      }
+  })
+</script>

@@ -1,0 +1,87 @@
+.input-tally{
+  padding: 1rem;
+  height: 45px;
+  color: inherit;
+  border: 2px solid #3b7a9e;
+  border-radius: 0px;
+  font-size: 1.2em;
+  transition: border-color 200ms ease-in;
+}
+.pound {
+    display: inline;
+    height: 40px;
+    width: 40px;
+    font-size: 21px;
+    padding-top: 6px;
+    background-color: #3b7a9e;
+    color: #fff;
+    text-align: center;
+    float: left;
+    font-weight: 600;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+
+}
+.pound:focus{
+    outline: none;
+box-shadow: -4 0 0 3px #fe781f;
+
+}
+.spinner-input {
+    text-align: right;
+    width: 100%;
+}
+.spinner-button {
+ padding:10px 16px;
+ text-decoration:none;
+ color:#fff
+}
+.spinner-inner {
+ float:left;
+ width:71%
+}
+.spinner-input {
+ text-align:right;
+ width:98.5%
+ outline: 3px solid #f93;
+}
+@media screen and (max-width:600px) {
+ .spinner-inner {
+  float:left;
+  width:76.5%
+ }
+ .spinner-input {
+  text-align:right;
+  width:100%
+ }
+ input {
+  width:86%
+ }
+}
+@media screen and (max-width:425px) {
+ .spinner-inner {
+  float:left;
+  width:73%
+ }
+ .spinner-input {
+  text-align:right;
+  width:100%
+ }
+ input {
+  width:84%
+ }
+}
+@media screen and (max-width:375px) {
+ .spinner-inner {
+  float:left;
+  width:69%
+ }
+ .spinner-input {
+  text-align:right;
+  width:100%
+ }
+ input {
+  width:82%
+ }
+}
