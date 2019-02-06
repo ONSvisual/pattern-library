@@ -8,15 +8,25 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/a62dd01/css/main.css">
   <link rel="stylesheet" href="{{ path '/css/global.css' }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
+  <script src="/js/chosen.jquery.js"></script>
+  <link href="/css/chosen.css" rel="stylesheet" />
   <style>
     .collator-item {
-      margin-bottom: 2rem;
     padding-left: 10px;
-    margin-top: 15px;
     }
-.collator-title{
-  margin-bottom: 10px;
-  font-size: 1.3em;
+    .collator-title{
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .Preview-iframe{
+      top:20px;
+      left:20px;
+    }
+fieldset{
+  padding-left: 5px;
 }
   </style>
 <body>
@@ -24,13 +34,43 @@
   {{{ yield }}}
 
 </body>
+<script>
+// colors=["#206095", "#0F8243", "#00A5A1"]
+console.log('start of script')
+dropdownData=["ABCDEF","B","C","D","E"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:80%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
 
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 5,
+  search: true
+
+})
+</script>
 <!--Scripts-->
 <!--<script src="{{ path '/assets/scripts/bundle.js' }}" charset="utf-8"></script>-->
 <script src="{{ path '/js/copy.js' }}" charset="utf-8"></script>
 <script src="{{ path '/js/script.js' }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+
+
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script>
@@ -50,4 +90,17 @@ $('textarea').keyup(function() {
   $('#char-count').text(length);
 });
 </script>
+<script>
+      document.getElementById("plus").addEventListener("click", function() {
+        var typenumber = document.getElementById("typenumber").value
+        document.getElementById("typenumber").value = +typenumber + 1
+      })
+      document.getElementById("minus").addEventListener("click", function() {
+        if (document.getElementById("typenumber").value > 0) {
+          var typenumber = document.getElementById("typenumber").value
+          document.getElementById("typenumber").value = +typenumber - 1
+        }
+      })
+    </script>
+
 </html>

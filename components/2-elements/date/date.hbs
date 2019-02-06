@@ -1,78 +1,35 @@
-
-<div class="row">
-  <fieldset>
-      <legend class="field__legend mars">Select all that apply</legend>
-      <div class="date-group">
+<fieldset>
+  <legend class="field__legend mars">Select all that apply</legend>
+  <div class="date-group">
+    <div class="date-input-group">
+        <label class="date-input-label" for="dob-day">Day</label>
+        <input class="date-input date-input-box" id="dob-day" placeholder="DD" name="dob-day" type="number" pattern="[0-9]*" min="1" max="31" required>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="date-input-group">
+        <label class="date-input-label" for="dob-month">Month</label>
+        <select class="input input--select" id="date-range-from-month" name="date-range-from-month">
+              <option value="" disabled="disabled" selected="selected">Select month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+        </select>
+      </div>
+    </div>
+      <div class="govuk-date-input__item">
         <div class="date-input-group">
-            <label class="date-input-label" for="dob-day">
-              Day
-            </label>
-            <input class="date-input date-input-box" id="dob-day" placeholder="DD" name="dob-day" type="number" pattern="[0-9]*" min="1" max="31">
-          </div>
-
-        <div class="govuk-date-input__item">
-          <div class="date-input-group">
-            <label class="date-input-label" for="dob-month">
-              Month
-            </label>
-            <select class="input input--select" id="date-range-from-month" name="date-range-from-month">
-                          <option value=""
-                            disabled="disabled"
-                            selected="selected">Select month</option>
-                          <option value="1"
-
-                            >January</option>
-                          <option value="2"
-
-                            >February</option>
-                          <option value="3"
-
-                            >March</option>
-                          <option value="4"
-
-                            >April</option>
-                          <option value="5"
-
-                            >May</option>
-                          <option value="6"
-
-                            >June</option>
-                          <option value="7"
-
-                            >July</option>
-                          <option value="8"
-
-                            >August</option>
-                          <option value="9"
-
-                            >September</option>
-                          <option value="10"
-
-                            >October</option>
-                          <option value="11"
-
-                            >November</option>
-                          <option value="12"
-
-                            >December</option>
-                      </select>          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="date-input-group">
-            <label class="date-input-label" for="dob-year">
-              Year
-            </label>
-            <input class="date-input year-input-box" id="dob-year" placeholder="YYYY" name="dob-year" type="number" pattern="[0-9]*">
-          </div>
+          <label class="date-input-label" for="dob-year">Year</label>
+          <input class="date-input year-input-box" id="dob-year" placeholder="YYYY" name="dob-year" type="number" pattern="[0-9]*">
         </div>
       </div>
-
-
-      <!--Highlight syntax-->
-      <pre id="p1"><code class="hljs xml">&lt;button class="btn btn--primary btn--green">Primary button&lt;/button></code>
-        <span class="trigger"><button onclick="copyToClipboard('#p1')" class="copy-btn" data-tooltip-id="1" style="border: none; background: none;border: solid 1px #008e49;"></button>
-        </span>
-      </pre>
-
-  </fieldset>
-</div>
+    </div>
+</fieldset>

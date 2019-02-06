@@ -3,10 +3,20 @@ $color-white: #FFFFFF;
 
 body {
   font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+
 }
+
+.Preview-iframe{
+  top:20px;
+  left:20px;
+}
+
+
 h1, h2, h3{
   margin: 0;
 }
+
 .h3{
 font-weight: bold;
     font-size: 21px;
@@ -15,7 +25,7 @@ font-weight: bold;
 }
 legend{
   border:0px;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 /*Margins*/
@@ -31,18 +41,19 @@ legend{
 
 /*Margins end*/
 @import "/components/**/*.scss";
-@import "../../components/2-elements/button/button.scss";
 @import "../../components/1-styles/colour/colour.scss";
 @import "../../components/1-styles/grids/grids.scss";
 @import "../../components/2-elements/select/select.scss";
 @import "../../components/2-elements/checkbox/checkbox.scss";
 @import "../../components/2-elements/radio/radio.scss";
 @import "../../components/2-elements/text/text.scss";
+@import "../../components/2-elements/postcode/postcode.scss";
 @import "../../components/2-elements/fieldset/fieldset.scss";
 @import "../../components/2-elements/date/date.scss";
 @import "../../components/2-elements/textarea/textarea.scss";
+@import "../../components/2-elements/tally/tally.scss";
 @import "../../components/2-elements/multiselect/multiselect.scss";
 @import "../../components/2-elements/error_summary/error_summary.scss";
 @import "../../components/2-elements/error_message/error_message.scss";
-@import "../../components/button_sdc/_buttons.scss";
+@import "../../components/2-elements/buttons/_buttons.scss";
 @import "../../docs/index.scss";

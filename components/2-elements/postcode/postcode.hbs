@@ -1,49 +1,10 @@
-<style>
-.search-control{
-  height: 40px;
-  width:100%;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 2px solid #1b5f97;
-    border-radius: 0px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
-.search-group{
-  border-radius: 0px;
-    background-color: #206095;
-    color: white;
-    padding: 6px 3px;
-    border:0;
-    font-size: 1.3em;
-}
-
-/* .focus{
-
-} */
-.input-group{
-      min-width: 300px;
-}
-input:focus{
-  outline: 3px solid #fe781f;
-}
-</style>
-
-<div class="col-xs-3" style="margin-top: 20px;">
-  <div class="input-group stylish-input-group">
+<legend>Search your postcode</legend>
+<div class="input-group">
     <input type="text" class="search-control"  placeholder="Search" >
-      <span class="input-group-addon search-group">
-        <button type="submit" style="background: none;border: 0;">
+      <div class="input-group-addon search-group">
+        <button type="submit" style="background: none;border:0;">
           <span class="visuallyhidden">Search</span>
           <span class="glyphicon glyphicon-search"></span>
         </button>
-      </span>
+      </div>
     </div>
-</div>

@@ -1,46 +1,4 @@
-<script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
-<script src="/js/chosen.jquery.js"></script>
-<link href="/css/chosen.css" rel="stylesheet" />
-
-
-
-<div class="row">
-      <div class="col-sm-8">
-
-<h3>Start typing or click an option</h3>
-<div id="dropdown2"></div>
-
+<div class="col-sm-8">
+  <legend>Start typing or click an option</legend>
+  <div id="dropdown2"></div>
 </div>
-</div>
-
-<script>
-// colors=["#206095", "#0F8243", "#00A5A1"]
-console.log('start of script')
-dropdownData=["ABCDEF","B","C","D","E","F"]
-d3.select("#dropdown2")
-  .append("select")
-  .attr("id","droppy2")
-  .attr("style", "width:80%")
-  .attr("multiple", "true")
-  .attr("data-placeholder", "Choose up to 3 letters")
-  .style("font-size", "23px")
-d3.select("#droppy2")
-  .append("option")
-d3.select("#droppy2")
-  .selectAll("p")
-  .data(dropdownData)
-  .enter()
-  .append("option")
-  .attr("value", function(d){return d})
-  .text(function(d){return d});
-
-
-$('#droppy2').chosen({
-  allow_single_deselect: true,
-  no_results_text: "No results found for:",
-  max_selected_options: 5,
-  search: true
-
-})
-</script>
