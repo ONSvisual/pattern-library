@@ -24,12 +24,11 @@ $blue:#174363;
 }
 .btn {
   position: relative;
-  padding: 7px 15px;
+  padding: 10px 15px;
   margin: 0 0 20px;
   line-height:normal;
   color: #fff;
   font-size: 1.3em !important;
-  font-weight: 600;
   border-radius: 0px !important;
   display: inline-block;
   text-rendering: optimizeLegibility;
@@ -44,11 +43,11 @@ $blue:#174363;
 
 &:focus{
   outline: none;
-  box-shadow: 0px 0px 0 3px #fe781f;
+  box-shadow: 0px 0px 0 3px #FFA23A;
   color: white;
       outline-offset: 0px;
 }
-&active:focus{
+&:active:focus{
   outline:0;
 }
 }

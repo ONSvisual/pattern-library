@@ -14,8 +14,7 @@ max-width: 100%;
   font-weight: bold;
 }
 textarea:focus{
-  outline: none;
-  box-shadow: 0 0 0 3px #fe781f;
+  outline: 3px solid #FFA23A;
 }
 .textarea-text{
   margin-top: 0;

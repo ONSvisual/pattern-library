@@ -42,3 +42,7 @@ Expect significant change before this item put to use.</p>
 <p>Do not implement. This component may be experimental and un-tested.
 Expect significant change before this item put to use.</p>
 </div>
+
+<h2>Download Template</h2>
+<a href="assets/img/sketch.png.zip" download="filename">
+<img src="assets/img/sketch.png" width="150px" height="62px"></a>

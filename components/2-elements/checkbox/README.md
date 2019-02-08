@@ -1,10 +1,10 @@
 ## When to use this component
 
-TEXT
+Use the checkboxes component when you need to help users select multiple options from a list or toggle a single option on or off
 
 ## When not to use this component
 
-TEXT
+Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the radios component.
 
 ## How it works
 

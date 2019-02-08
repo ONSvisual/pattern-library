@@ -28,9 +28,8 @@ border-radius: 0;
 appearance: none;
 }
 .date-input:focus{
-  outline:none;
-  box-shadow:0px 0px 0 3px #fe781f;
-
+  outline:3px solid #FFA23A;
+  
 }
 .date-input-label{
   display: block;
@@ -43,12 +42,12 @@ appearance: none;
       margin-bottom: 30px;
 
       @media screen and (max-width: 480px) {
+        display: block;
 
       }
 
       @media screen and (max-width:786px){
         margin-bottom:20px;
-        display: block;
         width: 100%;
       }
 

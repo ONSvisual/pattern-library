@@ -23,13 +23,37 @@
     border:0;
     font-size: 1.3em;
 }
-
+div #dropdown3 .chosen-container-single .chosen-single div b{
+  display: none!important;
+}
 
 .input-group{
       width: 300px;
+      margin-bottom: 20px;
+
+      &:focus{
+        outline: 3px solid #FFA23A;
+      }
+}
+#dropdown3 input[type="text"]:focus{
+  outline: 3px solid #FFA23A!important;
+  outline-offset: 0px!important;
+}
+.find{
+  background-color: #d2dfe9;
+  padding: 15px 15px 20px 15px;
+  width: 100%;
+
+h3{
+  font-weight: bold;
+    color: #1b5f97;
+}
+p{
+  margin: 0;
+}
 }
 input:focus{
-  outline: 3px solid #fe781f;
+  outline: 3px solid #FFA23A;
   position: relative;
 }
 .button{

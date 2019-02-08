@@ -8,3 +8,33 @@
         </button>
       </div>
     </div>
+
+    <legend>Chosen Dropdown</legend>
+    <div class="find">
+      <h3>Find data in your area</h3>
+      <p>Enter a UK area</p>
+    <div id="dropdown3"></div>
+    </div>
+    <script>
+      console.log('start of script')
+      dropdownData = ["Cardiff", "Newport", "London"]
+      d3.select("#dropdown3")
+        .append("select")
+        .attr("id", "droppy2")
+        .attr("style", "width:100%")
+        .attr("data-placeholder", "Choose a letter")
+      d3.select("#droppy2")
+        .append("option")
+      d3.select("#droppy2")
+        .selectAll("p")
+        .data(dropdownData)
+        .enter()
+        .append("option")
+        .attr("value", function(d) {return d})
+        .text(function(d) {return d});
+
+      $('#droppy2').chosen({
+        allow_single_deselect: true,
+        no_results_text: "No results found for:"
+      })
+    </script>
