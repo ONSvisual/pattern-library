@@ -59,7 +59,24 @@ $blue:#174363;
     background-color: #124d80 !important;
   }
 }
+.btn--next::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";margin-left: 10px;
+}
+.btn--start::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";margin-left: 10px;
+}
+.btn--previous::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";margin-right: 10px;
+}
 
+.btn--female::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f182";margin-left: 10px;
+
+}
+.btn--male::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f183";margin-right: 10px;
+
+}
 .btn--loader {
   transition: color 300ms ease-out;
   position: relative;

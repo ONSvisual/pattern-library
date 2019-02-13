@@ -23,21 +23,54 @@ module.exports = {
     'context': {
       'btns' : [
         {
-          'btn-classes': 'btn--primary btn--green',
-
-          'label': 'Continue'
-        },
-        {
           'btn-classes': 'btn--primary btn--secondary btn--blue',
           'label': 'Cancel'
+        },
+        {
+          'btn-classes': 'btn--primary btn--green',
+          'label': 'Continue'
+
         },
       ],
     },
   },{
+    'name': 'group',
+    'label': 'Interaction',
+    'context': {
+      'btns' : [
+        {
+          'btn-classes': 'btn--primary btn--green btn--previous',
+
+          'label': 'Previous'
+        },
+        {
+          'btn-classes': 'btn--primary btn--green btn--next',
+          'label': 'Next'
+        },
+      ],
+    },
+  },{
+    'name': 'group',
+    'label': 'Gender',
+    'context': {
+      'btns' : [
+        {
+          'btn-classes': 'btn--primary btn--green btn--male',
+
+          'label': 'Male'
+        },
+        {
+          'btn-classes': 'btn--primary btn--green btn--female',
+          'label': 'Female'
+        },
+      ],
+    },
+  },
+  {
     'name': 'start',
     'label': 'Start button',
     'context': {
-      'btn-classes': 'btn--green',
+      'btn-classes': 'btn--green btn--start',
       'label': 'Start'
     },
   },

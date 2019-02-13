@@ -3,19 +3,36 @@
   "version": "0.1.0",
   "dependencies": {
     "@frctl/fractal": "^1.1.7",
+    "browser-sync": "^2.26.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
     "fractal-component": "^3.4.2",
     "gulp": "^4.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
     "highlight.js": "^9.13.1",
+    "lighthouse": "^4.0.0-alpha.2-3.2.1",
+    "lodash": "^4.17.11",
+    "path": "^0.12.7",
     "prismjs": "^1.15.0",
+    "puppeteer": "^1.11.0",
     "pygments": "^0.2.1",
-    "rainbow-code": "^2.1.4"
+    "rainbow-code": "^2.1.4",
+    "scripts": {
+      "build": "yarn prestart && yarn compile_assets && gulp scripts:lint && gulp fractal:build && node lighthouse.js",
+      "compile_assets": "gulp",
+      "deploy": "gulp && yarn build && gh-pages -d dist",
+      "prestart": "yarn --force",
+      "start": "yarn && gulp dev",
+      "test": "gulp scripts:test",
+      "test:a11y": "yarn build",
+      "test:watch": "gulp test:watch"
+    },
+    "ws": "3.3.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp-sass": "^4.0.2",
-    "ws": "3.3.2"
+    "webpack-lighthouse-plugin": "^1.0.4"
   }
 }

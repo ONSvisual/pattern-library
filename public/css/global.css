@@ -410,7 +410,7 @@ div #dropdown3 .chosen-container-single .chosen-single div b {
     font-weight: bold;
     color: #1b5f97; }
   .find p {
-    margin: 0; }
+    margin: 0 0 7px 0; }
 
 input:focus {
   outline: 3px solid #FFA23A;
@@ -707,6 +707,38 @@ input:focus, select:focus {
   outline: none;
   box-shadow: 0px -1px 0 3px #FFA23A; }
 
+.chosen-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  margin-left: 10px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #1c5e97;
+  height: 36px;
+  color: white;
+  width: 39px;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 27px; }
+
+.chosen-container.chosen-with-drop::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d8";
+  margin-left: 10px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #1c5e97;
+  height: 36px;
+  color: white;
+  width: 39px;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 27px; }
+
 /*.search-choice:nth-child(1) {
     background-color: #206095 !important;
 }
@@ -792,15 +824,27 @@ select:focus {
   font-weight: bold;
   text-decoration: underline; }
 
+.success--text {
+  color: #008340;
+  font-weight: bold;
+  margin: 0; }
+
 .error--message {
   padding: 13px;
   border: solid 3px #D32F2F;
   margin-bottom: 30px;
   width: 60%; }
-  .error--message p {
-    padding: 0;
-    margin-top: 0;
-    font-size: 1.2em; }
+
+.success--message {
+  padding: 13px;
+  border: solid 3px #008340;
+  margin-bottom: 30px;
+  width: 60%; }
+
+p {
+  padding: 0;
+  margin-top: 0;
+  font-size: 1em; }
 
 .error--box {
   padding: 0 0 0 10px;
@@ -834,6 +878,36 @@ select:focus {
   background-color: #174363 !important; }
   .btn--blue:hover {
     background-color: #124d80 !important; }
+
+.btn--next::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  margin-left: 10px; }
+
+.btn--start::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  margin-left: 10px; }
+
+.btn--previous::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f053";
+  margin-right: 10px; }
+
+.btn--female::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f182";
+  margin-left: 10px; }
+
+.btn--male::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f183";
+  margin-right: 10px; }
 
 .btn--loader {
   transition: color 300ms ease-out;
