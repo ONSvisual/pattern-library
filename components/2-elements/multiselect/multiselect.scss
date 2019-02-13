@@ -33,41 +33,7 @@ input:focus,select:focus {
   outline:none;
   box-shadow:0px -1px 0 3px #FFA23A;
 }
-.chosen-container::after{
-  font-family: "Font Awesome 5 Free";
-font-weight: 900;
-content: "\f0d7";
-margin-left: 10px;
-position: absolute;
-top: 2px;
-right: 2px;
-background: #1c5e97;
-height: 36px;
-color: white;
-width: 39px;
-text-align: center;
-padding-top: 6px;
-font-size: 27px;
 
-}
-
-
-.chosen-container.chosen-with-drop::after{
-  font-family: "Font Awesome 5 Free";
-font-weight: 900;
-content: "\f0d8";
-margin-left: 10px;
-position: absolute;
-top: 2px;
-right: 2px;
-background: #1c5e97;
-height: 36px;
-color: white;
-width: 39px;
-text-align: center;
-padding-top: 6px;
-font-size: 27px;
-}
 
 /*.search-choice:nth-child(1) {
     background-color: #206095 !important;
