@@ -1,0 +1,46 @@
+.results_box--blue{
+  background-color: #206095;
+  color: white;
+}
+.results_box--red{
+  background-color: #D32F2F;
+  color: white;
+}
+.results_box{
+  padding: 20px 20px 30px;
+  width: 100%;
+  font-weight: bold;
+line-height: 2em;
+margin-bottom: 20px;
+
+  h3{
+      font-weight: bold;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+.results_text{
+  font-size: 2.5em;
+}
+.results_text--sml{
+  font-size: 2em;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.results_box--outline{
+  border:2px solid #206095;
+      padding: 0;
+
+      h3{
+        padding: 10px;
+    background: #1c5e97;
+    color: white;}
+}
+.results_text--outline{
+  padding: 10px;
+  font-size: 2.5em;
+  color: #1c5e97;
+}
