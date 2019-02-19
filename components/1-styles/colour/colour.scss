@@ -4,8 +4,8 @@ $poppy: #d32f2f;
 $matisse: #206095;
 $salem: #0F8243;
 $teal:#008080;
-$lightteal:#00A5A1;
-$lightblue:#27A0CC;
+$lightteal:#00A7A3;
+$lightblue:#36ADD9;
 $slate:#5F7682;
 $purple:#37288B;
 $mauve:#766FAF;
@@ -17,13 +17,17 @@ $yellow:#E2BC22;
 $onsblue: #003C57;
 $carrot:#FF9933;
 $onsgreen:#A8BD3A;
-
+$thunder:#323132;
+$shipgrey:#414042;
+$iron:#D0D2D3;
+$gallery:#EAEAEA;
 /*Colours*/
 .box{
   width: 120px!important;
 }
 .col-title span{
 cursor: pointer;
+    text-decoration: underline;
 }
 .center{
   text-align: center;
@@ -63,6 +67,18 @@ cursor: pointer;
 }
 .onsblue{
   color: $onsblue;
+}
+.thunder{
+  color: $thunder;
+}
+.shipgrey{
+  color: $shipgrey;
+}
+.iron{
+  color: $iron;
+}
+.gallery{
+  color: $gallery;
 }
 .carrot{
   color: $carrot;
@@ -109,6 +125,15 @@ cursor: pointer;
 }
 .circle--gallery{
   background-color: #eaeaea;
+}
+.circle--thunder{
+  background-color: #323132;
+}
+.circle--shipgrey{
+  background-color: #414042;
+}
+.circle--iron{
+  background-color: #D0D2D3;
 }
 .circle--matisse{
   background-color: #206095;
@@ -171,14 +196,15 @@ cursor: pointer;
     background-color:$onsgreen;
 }
 .title{
-  font-size: 18px;
-  font-weight: bold;
-  margin: 15px 0 5px;
+  font-size: 25px;
+      font-weight: 100;
+      margin: 15px 0 14px;
 }
 .col-title{
   font-size: 18px;
     margin: 0;
 font-weight: bold;
+    padding: 4px 0;
     border-top: 2px dashed #ccc;
 }
 .box-title{

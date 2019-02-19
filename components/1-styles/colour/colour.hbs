@@ -1,10 +1,8 @@
-<div class="row">
-  <h1>Colour palette</h1>
-  <h3 class="">Primary, secondary & grey Palettes</h3>
+  <legend>Primary, secondary & grey Palettes</legend>
   <p style="margin-top:0;">Click on the colour to copy the hex code</p>
 
   <!--Logo Colours-->
-
+  <div class="row" style="padding:0;">
     <p class="title">Logo colours</p>
     <div class="col-md-1 box col-xs-5 center box">
       <div class="circle circle--onsblue"></div>
@@ -15,12 +13,12 @@
     <div class="circle circle--onsgreen"></div>
     <p class="col-title onsgreen">ONS Green<br><span>#A8BD3A</span></p>
     </div>
-</div><!--row end-->
+</div>
 
 
   <!--Primary Colours-->
 
-<div class="row">
+<div class="row" style="padding:0;">
   <p class="title">{{Primary}}</p>
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--matisse"></div>
@@ -50,10 +48,17 @@
 
 
 
-<!--Secondary-->
-
-<div class="row">
+<!--Extended-->
+<div class="row" style="padding:0;">
   <p class="title">{{Secondary}}</p>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--onsblue"></div>
+    <p class="col-title onsblue">ONS Blue<br><span>#003C57</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+  <div class="circle circle--onsgreen"></div>
+  <p class="col-title onsgreen">ONS Green<br><span>#A8BD3A</span></p>
+  </div>
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--teal"></div>
     <p class="col-title teal">Teal<br><span>#008080</span></p>
@@ -61,12 +66,12 @@
 
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--lightteal"></div>
-    <p class="col-title lightteal">Light Teal<br><span>#00A5A1</span></p>
+    <p class="col-title lightteal">Light Teal<br><span>#00A7A3</span></p>
   </div>
 
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--lightblue"></div>
-    <p class="col-title lightblue">Light Blue<br><span>#27A0CC</span></p>
+    <p class="col-title lightblue">Light Blue<br><span>#36ADD9</span></p>
   </div>
 
   <div class="col-md-1 box col-xs-5 center box">
@@ -86,7 +91,7 @@
 
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--prince"></div>
-    <p class="col-title prince">Prince<br><span>#6E2585</span></p>
+    <p class="col-title prince">Census<br><span>#6E2585</span></p>
   </div>
 
   <div class="col-md-1 box col-xs-5 center box">
@@ -110,6 +115,32 @@
   </div>
 </div><!--row end-->
 
+<!--Greys-->
+<div class="row" style="padding:0;">
+  <p class="title">{{greys}}</p>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--thunder"></div>
+    <p class="col-title thunder">Thunder<br><span>#323132</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--shipgrey"></div>
+    <p class="col-title shipgrey">Ship grey<br><span>#414042</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--iron"></div>
+    <p class="col-title iron">Iron<br><span>#D0D2D3</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--gallery"></div>
+    <p class="col-title gallery">Gallery<br><span>#EAEAEA</span></p>
+  </div>
+</div>
+
+
+<div class="row" style="padding:0;">
+  <p class="title">{{usage}}</p>
+  <img src="/assets/img/colour_usage.svg"/>
+</div>
 <script>
     const aioColors = document.querySelectorAll('.col-title span');
 

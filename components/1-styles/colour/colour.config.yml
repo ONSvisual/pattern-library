@@ -2,4 +2,6 @@ title: Colour
 status: inDevelopment
 context:
     Primary: "Primary colours"
-    Secondary: "Secondary Things"
+    Secondary: "Extended Palette"
+    greys: "Greys"
+    usage: "Colour Usage"

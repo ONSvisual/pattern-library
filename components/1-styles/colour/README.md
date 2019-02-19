@@ -1,9 +1,3 @@
-# Research on this component
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-# Research on this component
-
-EAT YOUR GREENS!
-And exercise.
+# Colour Usage
+Preffered colour use – e.g. blue button for selection, green button for action, body & title systems, lines at
+top & bottom of tools, etc

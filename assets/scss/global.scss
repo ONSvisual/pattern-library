@@ -42,7 +42,9 @@ legend{
 /*Margins end*/
 @import "/components/**/*.scss";
 @import "../../components/1-styles/colour/colour.scss";
+@import "../../components/1-styles/typography/typography.scss";
 @import "../../components/1-styles/grids/grids.scss";
+@import "../../components/2-elements/tooltip/tooltip.scss";
 @import "../../components/2-elements/select/select.scss";
 @import "../../components/2-elements/checkbox/checkbox.scss";
 @import "../../components/2-elements/radio/radio.scss";
@@ -56,4 +58,5 @@ legend{
 @import "../../components/2-elements/error_summary/error_summary.scss";
 @import "../../components/2-elements/error_message/error_message.scss";
 @import "../../components/2-elements/buttons/_buttons.scss";
+@import "../../components/3-patterns/social_share/social_share.scss";
 @import "../../docs/index.scss";
