@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #206095 !important; }
 
 .Preview-iframe {
   top: 20px;
@@ -350,11 +351,23 @@ select {
     box-shadow: none;
     outline: none; }
 
+.label--disabled {
+  opacity: 0.5; }
+
+.input--checkbox--disabled {
+  cursor: not-allowed;
+  opacity: 0.5; }
+  .input--checkbox--disabled:checked {
+    background-size: 0; }
+  .input--checkbox--disabled:focus {
+    border: 2px solid #206095 !important;
+    outline: none !important; }
+
 input:checked ~ .field__other {
   display: block; }
 
 .label {
-  color: #000 !important;
+  color: #206095 !important;
   font-weight: 400 !important;
   font-size: 1.1em;
   padding: 8px 10px 0px;
@@ -442,7 +455,7 @@ input[type=checkbox], input[type=radio] {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555;
+  color: #206095;
   background-color: #fff;
   background-image: none;
   border: 2px solid #1b5f97;
@@ -890,6 +903,9 @@ p {
   padding: 0 0 0 10px;
   border-left: 3px solid #D32F2F;
   margin-bottom: 30px; }
+
+.btn--primary-disabled:active {
+  top: 0 !important; }
 
 .btn {
   position: relative;
