@@ -11,13 +11,27 @@ module.exports = {
       'btn-classes': 'btn--primary btn--green'
     },
   },{
-    'name': 'secondary',
+    'name': 'primary',
+    'label': 'Primary button',
+    'btn-classes': 'btn--primary btn--green btn--primary-disabled'
+
+},{
+    'name': 'group',
     'label': 'Secondary',
     'context': {
+      'btns' : [
+        {
       'btn-classes': 'btn--secondary btn--blue',
       'label': 'Secondary button'
+    },{
+      'btn-classes': 'btn--secondary btn--blue btn--primary-disabled',
+      'label': 'Disabled'
+
     },
-  },{
+    ]
+    },
+  },
+  {
     'name': 'group',
     'label': 'Group',
     'context': {
@@ -31,6 +45,7 @@ module.exports = {
           'label': 'Continue'
 
         },
+
       ],
     },
   },{

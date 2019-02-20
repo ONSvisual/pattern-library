@@ -22,6 +22,11 @@ $blue:#174363;
     outline: 3px solid $color-focus-outline;
   }
 }
+.btn--primary-disabled{
+&:active{
+  top:0!important;
+}
+}
 .btn {
   position: relative;
   padding: 10px 15px;
