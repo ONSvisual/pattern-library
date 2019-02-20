@@ -25,6 +25,7 @@
   transition: background-size 50ms ease-out;
       -webkit-appearance: none;
 
+
   &:checked {
     background-size: 24px;
     box-shadow: none;
@@ -35,12 +36,29 @@
     outline: none;
 
   }
+
+}
+.label--disabled{
+  opacity: 0.5;
+}
+.input--checkbox--disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  &:checked{
+    background-size: 0;
+  }
+  &:focus {
+    border: 2px solid #206095!important;
+    outline: none!important;
+
+  }
 }
 input:checked~.field__other {
     display: block;
 }
 .label{
-  color: #000 !important;
+  color: #206095 !important;
     font-weight: 400 !important;
     font-size: 1.1em;
     padding: 8px 10px 0px;
