@@ -3,6 +3,9 @@ body {
   font-size: 16px;
   color: #206095 !important; }
 
+label {
+  font-size: 1.1em; }
+
 .Preview-iframe {
   top: 20px;
   left: 20px; }
@@ -296,7 +299,7 @@ p {
   color: inherit;
   border: 2px solid #1b5f97;
   border-radius: 0px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: border-color 200ms ease-in; }
   @media screen and (max-width: 480px) {
     .input {
@@ -453,7 +456,7 @@ input[type=checkbox], input[type=radio] {
   height: 40px;
   width: 100%;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #206095;
   background-color: #fff;
@@ -762,7 +765,6 @@ button:focus {
 input.chosen-search-input {
   text-align: left !important;
   height: 40px;
-  font-size: 16px !important;
   text-align: right;
   padding-right: 5px !important; }
 
@@ -830,7 +832,6 @@ input:focus, select:focus {
 input.chosen-search-input {
   text-align: left !important;
   height: 40px;
-  font-size: 16px !important;
   text-align: right;
   padding-right: 5px !important; }
 
@@ -861,8 +862,7 @@ select:focus {
   width: 60%; }
   .error_message p {
     padding: 0;
-    margin-top: 0;
-    font-size: 1.2em; }
+    margin-top: 0; }
 
 .error_box {
   padding: 0 0 0 10px;
@@ -870,7 +870,7 @@ select:focus {
 
 .error {
   color: #D32F2F;
-  margin: 0; }
+  margin-bottom: 10px; }
 
 .error--text a {
   color: #D32F2F;
@@ -947,6 +947,24 @@ p {
   content: "\f054";
   margin-left: 10px; }
 
+.btn--up::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3bf";
+  margin-right: 10px; }
+
+.btn--top::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f139";
+  margin-right: 10px; }
+
+.btn--restart::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2f9";
+  margin-left: 10px; }
+
 .btn--previous::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -959,11 +977,23 @@ p {
   content: "\f182";
   margin-left: 10px; }
 
-.btn--male::before {
+.btn--male::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f183";
-  margin-right: 10px; }
+  margin-left: 10px; }
+
+.btn--play::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f144";
+  margin-left: 10px; }
+
+.btn--pause::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04c";
+  margin-left: 10px; }
 
 .btn--loader {
   transition: color 300ms ease-out;

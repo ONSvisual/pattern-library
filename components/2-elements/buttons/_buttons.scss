@@ -70,6 +70,15 @@ $blue:#174363;
 .btn--start::after{
   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";margin-left: 10px;
 }
+.btn--up::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3bf";margin-right: 10px;
+}
+.btn--top::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f139";margin-right: 10px;
+}
+.btn--restart::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2f9";margin-left: 10px;
+}
 .btn--previous::before{
   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";margin-right: 10px;
 }
@@ -78,9 +87,14 @@ $blue:#174363;
   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f182";margin-left: 10px;
 
 }
-.btn--male::before{
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f183";margin-right: 10px;
-
+.btn--male::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f183";margin-left: 10px;
+}
+.btn--play::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f144";margin-left: 10px;
+}
+.btn--pause::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f04c";margin-left: 10px;
 }
 .btn--loader {
   transition: color 300ms ease-out;

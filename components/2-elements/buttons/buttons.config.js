@@ -49,7 +49,6 @@ module.exports = {
         {
           'btn-classes': 'btn--primary btn--green',
           'label': 'Continue'
-
         },
 
       ],
@@ -86,13 +85,51 @@ module.exports = {
         },
       ],
     },
-  },
-  {
-    'name': 'start',
-    'label': 'Start button',
+  },{
+    'name': 'group',
+    'label': 'Play / Pause',
     'context': {
-      'btn-classes': 'btn--green btn--start',
-      'label': 'Start'
+      'btns' : [
+        {
+          'btn-classes': 'btn--primary btn--green btn--play',
+
+          'label': 'Play'
+        },
+        {
+          'btn-classes': 'btn--primary btn--green btn--pause',
+          'label': 'Pause'
+        },
+      ],
+    },
+  },{
+    'name': 'group',
+    'label': 'Action',
+    'context': {
+      'btns' : [
+        {
+          'btn-classes': 'btn--primary btn--green btn--start',
+          'label': 'Start'
+        },
+        {
+          'btn-classes': 'btn--secondary btn--blue btn--restart',
+          'label': 'Restart'
+        },
+      ],
+    },
+  },{
+    'name': 'group',
+    'label': 'Navigate',
+    'context': {
+      'btns' : [
+        {
+          'btn-classes': 'btn--primary btn--green btn--up',
+          'label': 'Up a level'
+        },
+        {
+          'btn-classes': 'btn--secondary btn--blue btn--top',
+          'label': 'Back to top'
+        },
+      ],
     },
   },
   ]
