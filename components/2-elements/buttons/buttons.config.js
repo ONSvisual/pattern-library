@@ -8,7 +8,7 @@ module.exports = {
     'label': 'Primary',
     'context': {
       'label': 'Primary button',
-      'btn-classes': 'btn--primary btn--green'
+      'btn-classes': 'btn--primary'
     },
   },{
     'name': 'group',
@@ -16,7 +16,7 @@ module.exports = {
     'context': {
       'btns' : [
         {
-      'btn-classes': 'btn--secondary btn--blue',
+      'btn-classes': 'btn--secondary',
       'label': 'Secondary button'
     },
     ]
@@ -30,7 +30,7 @@ module.exports = {
       'btn-classes': 'btn--primary btn--green btn--primary-disabled',
       'label': 'Primary disabled'
     },{
-      'btn-classes': 'btn--secondary btn--blue btn--primary-disabled',
+      'btn-classes': 'btn--secondary btn--primary-disabled',
       'label': 'Secondary Disabled'
 
     },
@@ -43,7 +43,7 @@ module.exports = {
     'context': {
       'btns' : [
         {
-          'btn-classes': 'btn--primary btn--secondary btn--blue',
+          'btn-classes': 'btn--secondary',
           'label': 'Cancel'
         },
         {
@@ -111,7 +111,7 @@ module.exports = {
           'label': 'Start'
         },
         {
-          'btn-classes': 'btn--secondary btn--blue btn--restart',
+          'btn-classes': 'btn--secondary btn--restart',
           'label': 'Restart'
         },
       ],
