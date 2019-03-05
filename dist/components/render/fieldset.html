@@ -1,0 +1,39 @@
+
+
+  <fieldset>
+      <legend class="">Legend</legend>
+      <p>Use the fieldset component to group related form inputs</p>
+        <div class="date-group">
+          <div class="date-input-group">
+            <label class="date-input-label" for="dob-day">Day</label>
+              <input class="date-input date-input-box" id="dob-day" placeholder="DD" name="dob-day" type="number" pattern="[0-9]*" min="1" max="31">
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="date-input-group">
+              <label class="date-input-label" for="dob-month">Month</label>
+              <select class="input input--select" id="date-range-from-month" name="date-range-from-month">
+                <option value="" disabled="disabled" selected="selected">Select month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="date-input-group">
+              <label class="date-input-label" for="dob-year">Year</label>
+              <input class="date-input year-input-box" id="dob-year" placeholder="YYYY" name="dob-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div>
+  </fieldset>
+

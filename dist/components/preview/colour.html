@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Preview Layout</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/a62dd01/css/main.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
+  <script src="/js/chosen.jquery.js"></script>
+  <link href="/css/chosen.css" rel="stylesheet" />
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <style>
+    .collator-item {
+    padding-left: 10px;
+    }
+    .collator-title{
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .Preview-iframe{
+      top:20px;
+      left:20px;
+      width: 90%!important;
+    }
+fieldset{
+  padding-left: 5px;
+}
+  </style>
+<body>
+
+    <legend>Primary, secondary & grey Palettes</legend>
+  <p style="margin-top:0;">Click on the colour to copy the hex code</p>
+
+  <!--Logo Colours-->
+  <div class="row" style="padding:0;">
+    <p class="title">Logo colours</p>
+    <div class="col-md-1 box col-xs-5 center box">
+      <div class="circle circle--onsblue"></div>
+      <p class="col-title onsblue">ONS Blue<br><span>#003C57</span></p>
+    </div>
+
+    <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--onsgreen"></div>
+    <p class="col-title onsgreen">ONS Green<br><span>#A8BD3A</span></p>
+    </div>
+</div>
+
+
+  <!--Primary Colours-->
+
+<div class="row" style="padding:0;">
+  <p class="title">Primary colours</p>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--matisse"></div>
+    <p class="col-title matisse">Matisse<br><span>#206095</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--astral"></div>
+    <p class="col-title astral">Astral<br><span>#3B7A9E</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--salem"></div>
+    <p class="col-title salem">Salem<br><span>#0F8243</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--carrot"></div>
+    <p class="col-title carrot">Carrot<br><span>#FF9933</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--poppy"></div>
+    <p class="col-title poppy">Poppy<br><span>#D32F2F</span></p>
+  </div>
+</div><!--Row end-->
+
+
+
+<!--Extended-->
+<div class="row" style="padding:0;">
+  <p class="title">Extended Palette</p>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--onsblue"></div>
+    <p class="col-title onsblue">ONS Blue<br><span>#003C57</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+  <div class="circle circle--onsgreen"></div>
+  <p class="col-title onsgreen">ONS Green<br><span>#A8BD3A</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--teal"></div>
+    <p class="col-title teal">Teal<br><span>#008080</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--lightteal"></div>
+    <p class="col-title lightteal">Light Teal<br><span>#00A7A3</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--lightblue"></div>
+    <p class="col-title lightblue">Light Blue<br><span>#36ADD9</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--slate"></div>
+    <p class="col-title slate">Slate<br><span>#5F7682</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--purple"></div>
+    <p class="col-title purple">Purple<br><span>#37288B</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--mauve"></div>
+    <p class="col-title mauve">Mauve<br><span>#766FAF</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--prince"></div>
+    <p class="col-title prince">Census<br><span>#6E2585</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--babypink"></div>
+    <p class="col-title babypink">Baby Pink<br><span>#EB92BB</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--pink"></div>
+    <p class="col-title pink">Pink<br><span>#D2376D</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--gold"></div>
+    <p class="col-title gold">Gold<br><span>#B8860B</span></p>
+  </div>
+
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--yellow"></div>
+    <p class="col-title yellow">Yellow<br><span>#E2BC22</span></p>
+  </div>
+</div><!--row end-->
+
+<!--Greys-->
+<div class="row" style="padding:0;">
+  <p class="title">Greys</p>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--thunder"></div>
+    <p class="col-title thunder">Thunder<br><span>#323132</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--shipgrey"></div>
+    <p class="col-title shipgrey">Ship grey<br><span>#414042</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--iron"></div>
+    <p class="col-title iron">Iron<br><span>#D0D2D3</span></p>
+  </div>
+  <div class="col-md-1 box col-xs-5 center box">
+    <div class="circle circle--gallery"></div>
+    <p class="col-title gallery">Gallery<br><span>#EAEAEA</span></p>
+  </div>
+</div>
+
+
+<div class="row" style="padding:0;">
+  <p class="title">Colour Usage</p>
+  <img src="/assets/img/colour_usage.svg"/>
+</div>
+<script>
+    const aioColors = document.querySelectorAll('.col-title span');
+
+    aioColors.forEach(color => {
+      color.addEventListener('click', () => {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(color);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        try {
+          document.execCommand('copy');
+          selection.removeAllRanges();
+
+          const original = color.textContent;
+          color.textContent = 'Copied!';
+          color.classList.add('success');
+
+          setTimeout(() => {
+            color.textContent = original;
+            color.classList.remove('success');
+          }, 1200);
+        } catch(e) {
+          const errorMsg = document.querySelector('.error-msg');
+          errorMsg.classList.add('show');
+
+          setTimeout(() => {
+            errorMsg.classList.remove('show');
+          }, 1200);
+        }
+      });
+    });
+</script>
+
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+
+</body>
+
+<!--Scripts-->
+<script>
+colors=["#206095", "#0F8243", "#00A5A1"]
+console.log('start of script')
+dropdownData=["Matisse","Green","Teal","Pink","lorem"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:80%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
+
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 5,
+  search: true
+
+})
+</script>
+
+
+<!--<script src="../../assets/scripts/bundle.js" charset="utf-8"></script>-->
+<script src="../../js/copy.js" charset="utf-8"></script>
+<script src="../../js/script.js"></script>
+
+
+<script>
+$('.input-group > *').focus(function() {
+        $('.input-group').addClass('focus');
+    })
+    .blur(function() {
+        $('.input-group').removeClass('focus');
+    });
+</script>
+
+<script>
+var maxLength = 100;
+$('textarea').keyup(function() {
+  var length = $(this).val().length;
+  var length = maxLength-length;
+  $('#char-count').text(length);
+});
+</script>
+<script>
+      document.getElementById("plus").addEventListener("click", function() {
+        var typenumber = document.getElementById("typenumber").value
+        document.getElementById("typenumber").value = +typenumber + 1
+      })
+      document.getElementById("minus").addEventListener("click", function() {
+        if (document.getElementById("typenumber").value > 0) {
+          var typenumber = document.getElementById("typenumber").value
+          document.getElementById("typenumber").value = +typenumber - 1
+        }
+      })
+    </script>
+
+</html>
+

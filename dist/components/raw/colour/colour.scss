@@ -1,0 +1,217 @@
+/*mixins*/
+$astral: #3B7A9E;
+$poppy: #d32f2f;
+$matisse: #206095;
+$salem: #0F8243;
+$teal:#008080;
+$lightteal:#00A7A3;
+$lightblue:#36ADD9;
+$slate:#5F7682;
+$purple:#37288B;
+$mauve:#766FAF;
+$prince:#6E2585;
+$babypink:#EB92BB;
+$pink:#D2376D;
+$gold:#B8860B;
+$yellow:#E2BC22;
+$onsblue: #003C57;
+$carrot:#FF9933;
+$onsgreen:#A8BD3A;
+$thunder:#323132;
+$shipgrey:#414042;
+$iron:#D0D2D3;
+$gallery:#EAEAEA;
+/*Colours*/
+.box{
+  width: 120px!important;
+}
+.col-title span{
+cursor: pointer;
+    text-decoration: underline;
+}
+.center{
+  text-align: center;
+}
+.bg-blue{
+  background-color: #1b5f97;
+  border-right: 2px solid #fff;
+}
+.box{
+  border:2px solid #ccc;
+  padding: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.row{
+  margin: 0;
+  padding: 20px 20px 0;
+}
+.circle{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+.poppy{
+  color: $poppy;
+}
+.astral{
+  color: $astral;
+}
+.matisse{
+  color: $matisse;
+}
+.salem{
+  color: $salem;
+}
+.onsblue{
+  color: $onsblue;
+}
+.thunder{
+  color: $thunder;
+}
+.shipgrey{
+  color: $shipgrey;
+}
+.iron{
+  color: $iron;
+}
+.gallery{
+  color: $gallery;
+}
+.carrot{
+  color: $carrot;
+}
+.teal{
+  color:$teal;
+}
+.lightteal{
+  color:$lightteal;
+}
+.lightblue{
+  color:$lightblue;
+}
+.slate{
+  color:$slate;
+}
+.purple{
+  color:$purple;
+}
+.mauve{
+  color:$mauve;
+}
+.prince{
+  color:$prince;
+}
+.babypink{
+  color:$babypink;
+}
+.pink{
+  color:$pink;
+}
+.gold{
+  color:$gold;
+}
+.yellow{
+  color:$yellow;
+}
+.onsgreen{
+  color:$onsgreen;
+}
+
+.circle--grey{
+  background-color: #414042;
+}
+.circle--gallery{
+  background-color: #eaeaea;
+}
+.circle--thunder{
+  background-color: #323132;
+}
+.circle--shipgrey{
+  background-color: #414042;
+}
+.circle--iron{
+  background-color: #D0D2D3;
+}
+.circle--matisse{
+  background-color: #206095;
+}
+.circle--astral{
+  background-color: #3B7A9E;
+}
+.circle--poppy{
+  background-color: #D32F2F;
+}
+.circle--salem{
+  background-color: #0F8243;
+}
+.circle--onsblue{
+  background-color: #003C57;
+}
+.circle--onsgreen{
+  background-color: #A8BD3A;
+}
+.circle--teal{
+  background-color: #008080;
+}
+.circle--carrot{
+  background-color: #FF9933;
+}
+.circle--teal{
+    background-color:$teal;
+}
+.circle--lightteal{
+    background-color:$lightteal;
+}
+.circle--lightblue{
+    background-color:$lightblue;
+}
+.circle--slate{
+    background-color:$slate;
+}
+.circle--purple{
+    background-color:$purple;
+}
+.circle--mauve{
+    background-color:$mauve;
+}
+.circle--prince{
+    background-color:$prince;
+}
+.circle--babypink{
+    background-color:$babypink;
+}
+.circle--pink{
+    background-color:$pink;
+}
+.circle--gold{
+    background-color:$gold;
+}
+.circle--yellow{
+    background-color:$yellow;
+}
+.circle--onsgreen{
+    background-color:$onsgreen;
+}
+.title{
+  font-size: 25px;
+      font-weight: 100;
+      margin: 15px 0 14px;
+}
+.col-title{
+  font-size: 18px;
+    margin: 0;
+font-weight: bold;
+    padding: 4px 0;
+    border-top: 2px dashed #ccc;
+}
+.box-title{
+     font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 12px 0;
+}

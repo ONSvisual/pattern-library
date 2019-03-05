@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Preview Layout</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/a62dd01/css/main.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
+  <script src="/js/chosen.jquery.js"></script>
+  <link href="/css/chosen.css" rel="stylesheet" />
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <style>
+    .collator-item {
+    padding-left: 10px;
+    }
+    .collator-title{
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .Preview-iframe{
+      top:20px;
+      left:20px;
+      width: 90%!important;
+    }
+fieldset{
+  padding-left: 5px;
+}
+  </style>
+<body>
+
+  <div class="col-sm-4">
+  <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+</div>
+
+
+</body>
+
+<!--Scripts-->
+<script>
+colors=["#206095", "#0F8243", "#00A5A1"]
+console.log('start of script')
+dropdownData=["Matisse","Green","Teal","Pink","lorem"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:80%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
+
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 5,
+  search: true
+
+})
+</script>
+
+
+<!--<script src="../../assets/scripts/bundle.js" charset="utf-8"></script>-->
+<script src="../../js/copy.js" charset="utf-8"></script>
+<script src="../../js/script.js"></script>
+
+
+<script>
+$('.input-group > *').focus(function() {
+        $('.input-group').addClass('focus');
+    })
+    .blur(function() {
+        $('.input-group').removeClass('focus');
+    });
+</script>
+
+<script>
+var maxLength = 100;
+$('textarea').keyup(function() {
+  var length = $(this).val().length;
+  var length = maxLength-length;
+  $('#char-count').text(length);
+});
+</script>
+<script>
+      document.getElementById("plus").addEventListener("click", function() {
+        var typenumber = document.getElementById("typenumber").value
+        document.getElementById("typenumber").value = +typenumber + 1
+      })
+      document.getElementById("minus").addEventListener("click", function() {
+        if (document.getElementById("typenumber").value > 0) {
+          var typenumber = document.getElementById("typenumber").value
+          document.getElementById("typenumber").value = +typenumber - 1
+        }
+      })
+    </script>
+
+</html>
+

@@ -1,0 +1,91 @@
+.input--checkbox {
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  border: 2px solid #206095;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #eee;
+  box-shadow: inset 0 0 0 3px white;
+  cursor: pointer;
+
+  transition: background-color 200ms ease-in, color 200ms ease-in;
+  &:focus, &:checked {
+    border-color: #206095;
+    outline: none;
+  }
+
+}
+.field__other input{
+  width: 90%;
+}
+.input--checkbox {
+  background: url("https://sdc-global-design-patterns.netlify.com/assets/img/icons/icons--check.svg") no-repeat center center;
+  background-size: 0;
+  transition: background-size 50ms ease-out;
+      -webkit-appearance: none;
+
+
+  &:checked {
+    background-size: 24px;
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+
+  }
+
+}
+.label--disabled{
+  opacity: 0.5;
+}
+.input--checkbox--disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  &:checked{
+    background-size: 0;
+  }
+  &:focus {
+    border: 2px solid #206095!important;
+    outline: none!important;
+
+  }
+}
+input:checked~.field__other {
+    display: block;
+}
+.label{
+  color: #206095 !important;
+    font-weight: 400 !important;
+    font-size: 1.1em;
+    padding: 8px 10px 0px;
+    position: relative;
+    bottom: 8px;
+}
+input[type=checkbox]:focus{
+  outline: 3px solid #FFA23A;
+
+
+}
+
+.field__item{
+
+  margin-bottom: 15px;
+}
+.field__other{
+  margin-top: 14px;
+padding: 15px;
+  border-left: 4px solid #bfc1c3;
+  display: none;
+    clear: both;
+
+}
+.legend-label{
+  margin-bottom: 20px;
+}
+.reveal{
+  padding-left: 0;
+}

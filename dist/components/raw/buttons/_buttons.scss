@@ -1,0 +1,137 @@
+$white:#fff;
+$blue:#174363;
+@mixin btn-override(
+  $bg,
+  $color,
+  $color-hover: $color,
+  $darken-hover: 10%,
+  $border-color: $bg,
+  $border-color-hover: darken($border-color, $darken-hover)
+) {
+  background-color: $bg;
+  color: $color;
+  border-color: $border-color;
+
+  &:hover, &:focus {
+    color: $color-hover;
+    background-color: darken($bg, $darken-hover);
+    border-color: $border-color-hover;
+  }
+
+  &:focus {
+    outline: 3px solid $color-focus-outline;
+  }
+}
+.btn--primary-disabled{
+&:active{
+  top:0!important;
+}
+}
+.btn {
+  position: relative;
+  padding: 10px 15px;
+  margin: 0 0 20px;
+  line-height:normal;
+  color: #fff;
+  font-size: 1.3em !important;
+  border-radius: 0px !important;
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  transition: background-color .2s ease-in, color .2s ease-in;
+
+  &:hover{
+    color: #ffffff;
+  }
+  &:active{
+    top:3px;
+  }
+
+&:focus{
+  outline: none;
+  box-shadow: 0px 0px 0 3px #FFA23A;
+  color: white;
+      outline-offset: 0px;
+}
+&:active:focus{
+  outline:0;
+}
+}
+.btn--blue {
+  background-color: $blue !important;
+  // box-shadow: 0 3px 0 0 #072d49;
+
+  &:hover{
+    background-color: #124d80 !important;
+  }
+}
+.btn--next::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";margin-left: 10px;
+}
+.btn--start::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";margin-left: 10px;
+}
+.btn--up::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3bf";margin-right: 10px;
+}
+.btn--top::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f139";margin-right: 10px;
+}
+.btn--restart::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2f9";margin-left: 10px;
+}
+.btn--previous::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";margin-right: 10px;
+}
+
+.btn--female::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f182";margin-left: 10px;
+
+}
+.btn--male::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f183";margin-left: 10px;
+}
+.btn--play::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f144";margin-left: 10px;
+}
+.btn--pause::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f04c";margin-left: 10px;
+}
+.btn--loader {
+  transition: color 300ms ease-out;
+  position: relative;
+  &::after {
+    display: block;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url("../img/loader.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5rem;
+    transition: opacity 300ms ease-out 200ms;
+    pointer-events: none;
+  }
+  &.is-loading {
+    color: transparent;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-group {
+  .btn-group__btn {
+    display: inline-block;
+    margin-right: 1rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

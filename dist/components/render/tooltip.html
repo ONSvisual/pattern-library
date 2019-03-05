@@ -1,0 +1,28 @@
+
+
+
+<div class="divider" style="padding:0 0 30px 0;margin-bottom:25px;">
+  <legend style="margin-bottom:10px;">Text hover</legend>
+    <a class="test" href="#" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elitsed diam nonummy nibh euis!">Hover over me</a>
+</div>
+<div class="divider" style="padding:0 0 30px 0;margin-bottom:25px;">
+  <legend style="margin-bottom:10px;">Icon hover</legend>
+  <a class="fas fa-question-circle test" href="#" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet,consectetuer adipiscing elitsed diam nonummy nibh euis!!"></a>
+</div>
+
+
+<details class="details" role="group">
+<summary class="details__summary" role="button" aria-controls="details-content-3" aria-expanded="true">Lorem ipsum</summary>
+<div class="details__body" id="details-content-3" aria-hidden="false">
+<label class="embed-code__label" for="embed-407-447e-8e54-4ad9ab18c79e">Title here</label>
+<p>Lorem ipsum dolor sit amet,consectetuer adipiscing elitsed diam nonummy nibh euis!!</p>
+</div>
+</details>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+

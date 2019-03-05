@@ -1,0 +1,64 @@
+
+
+<!--Error Message-->
+<legend>Error Message</legend>
+<p>Use an error message when there is a validation error. Explain what went wrong and how to fix it.</p>
+<div class="error--message">
+  <p style="font-weight:bold;font-size:1.2em;padding: 0;margin-top: 0;">There is a problem</p>
+  <p class="error--text"><a href="#">Please select a dropdown option</a></p>
+</div>
+
+  <div class="fieldset error--box" style="">
+    <h3 style="font-weight: bold;">Lorem ipsum dolor sit?</h3>
+    <p class="error">Please select from the dropdown</p>
+      <select class="input input--select" id="select" name="select" style="border: 3px solid #D32F2F;">
+        <option selected="" disabled="">Select an option</option>
+        <option value="bart">Bart Simpson</option>
+        <option value="homer">Homer Simpson</option>
+        <option value="marge">Marge Simpson</option>
+        <option value="lisa">Lisa Simpson</option>
+        <option value="ned">Ned Flanders</option>
+        <option value="bugs">Bugs Bunny</option>
+        <option value="7 Dwarves">The 7 Dwarves: Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey, Doc</option>
+        <option value="charlie brown">Charlie Brown</option>
+        <option value="snoopy">Snoopy</option>
+      </select>
+  </div>
+
+  <div class="error--box">
+    <fieldset>
+      <legend class="h3">Select all that apply</legend>
+      <p class="error">Please select all that apply</p>
+
+      <div class="field__item js-focusable-box">
+        <input class="input input--checkbox js-focusable" name="checkbox-answer" value="bacon" id="bacon" type="checkbox">
+        <label class="label label--inline venus " for="bacon">Bacon</label>
+      </div>
+      <div class="field__item js-focusable-box">
+        <input class="input input--checkbox js-focusable" name="checkbox-answer" value="olives" id="olives" type="checkbox">
+        <label class="label label--inline venus " for="olives">Olives</label>
+      </div>
+      <div class="field__item js-focusable-box">
+        <input class="input input--checkbox js-focusable" name="checkbox-answer" value="wine" id="wine" type="checkbox">
+        <label class="label label--inline venus " for="wine">Wine</label>
+        <div class="field__other field__block">
+          <label class="label reveal" for="other-answer" id="label-checkbox-other-input">Please specify type</label>
+          <input id="other-answer" name="other-answer-mandatory" data-qa="other-option" type="text" class="input js-focusable">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="error--box">
+    <label class="text--label" for="text-input">Enter some text</label>
+    <p class="error">Please enter more text</p>
+    <textarea name="Text" class="textarea textarea-error" cols="40" rows="5"></textarea>
+  </div>
+
+
+<!--Success Message-->
+  <legend>Success Message</legend>
+  <div class="success--message">
+    <p class="success--text">Form is now complete</p>
+  </div>
+

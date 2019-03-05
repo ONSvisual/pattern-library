@@ -1,0 +1,12 @@
+input[type=number]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: inherit;
+    opacity: 1; /* Firefox */
+}
+
+input[type=number]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: inherit;
+}
+
+input[type=number]::-ms-input-placeholder { /* Microsoft Edge */
+  color: inherit;
+}

@@ -1,0 +1,30 @@
+
+
+<legend>Chosen Dropdown</legend>
+<div id="dropdown3"></div>
+
+<script>
+  console.log('start of script')
+  dropdownData = ["A", "B", "C"]
+  d3.select("#dropdown3")
+    .append("select")
+    .attr("id", "droppy2")
+    .attr("style", "width:100%")
+    .attr("tabindex", "0")
+    .attr("data-placeholder", "Choose a letter")
+  d3.select("#droppy2")
+    .append("option")
+  d3.select("#droppy2")
+    .selectAll("p")
+    .data(dropdownData)
+    .enter()
+    .append("option")
+    .attr("value", function(d) {return d})
+    .text(function(d) {return d});
+
+  $('#droppy2').chosen({
+    allow_single_deselect: true,
+    no_results_text: "No results found for:"
+  })
+</script>
+
