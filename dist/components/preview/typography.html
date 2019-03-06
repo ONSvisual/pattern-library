@@ -94,11 +94,10 @@ d3.select("#droppy2")
   .attr("value", function(d){return d})
   .text(function(d){return d});
 
-
 $('#droppy2').chosen({
   allow_single_deselect: true,
   no_results_text: "No results found for:",
-  max_selected_options: 5,
+  max_selected_options: 3,
   search: true
 
 })

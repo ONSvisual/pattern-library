@@ -34,7 +34,7 @@ $blue:#174363;
   line-height:normal;
   color: #fff;
   font-size: 1.3em !important;
-  border-radius: 0px !important;
+  border-radius: 0px ;
   display: inline-block;
   text-rendering: optimizeLegibility;
   transition: background-color .2s ease-in, color .2s ease-in;
@@ -57,11 +57,19 @@ $blue:#174363;
 }
 }
 .btn--blue {
-  background-color: $blue !important;
+  background-color: $matisse !important;
   // box-shadow: 0 3px 0 0 #072d49;
 
   &:hover{
-    background-color: #124d80 !important;
+    background-color: $blue !important;
+  }
+}
+
+.btn--primary{
+  background-color: $matisse!important;
+
+  &:hover{
+    background-color: #174c78!important;
   }
 }
 .btn--next::after{

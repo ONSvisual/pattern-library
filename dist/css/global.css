@@ -239,6 +239,52 @@ legend {
   margin-bottom: 15px;
   padding: 10px; }
 
+.btn--education::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f19d";
+  margin-right: 10px; }
+
+.btn--job::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0b1";
+  margin-right: 10px; }
+
+.btn--income::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f154";
+  margin-right: 10px; }
+
+.btn--select {
+  color: #206095 !important;
+  border: solid #206095 !important;
+  border-radius: 40px !important;
+  border-right: solid #206095 !important;
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  transition: all ease .2s; }
+  .btn--select:hover {
+    background-color: #206095;
+    color: white !important; }
+  .btn--select:active {
+    top: 0 !important; }
+
+.btn--select {
+  margin-left: 0px !important; }
+
+.btn:active,
+.btn.active {
+  background-color: #206095;
+  color: white !important;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.btn-group > .btn:active {
+  background-color: #206095;
+  color: white !important; }
+
 /* Tooltip */
 .test {
   font-size: 18px; }
@@ -318,7 +364,7 @@ p {
   max-width: 18em;
   min-width: 13em;
   padding: 0 1rem;
-  background: white url("/assets/img/icons--chevron-down.svg") no-repeat center right 0px;
+  background: white url("/assets/img/icons--chevron-down.png") no-repeat center right -1px;
   background-size: 42px; }
 
 select {
@@ -493,7 +539,8 @@ div #dropdown3 .chosen-container-single .chosen-single div b {
 .find {
   background-color: #d2dfe9;
   padding: 15px 15px 20px 15px;
-  width: 100%; }
+  width: 100%;
+  max-width: 400px; }
   .find h3 {
     font-weight: bold;
     color: #1b5f97; }
@@ -914,7 +961,7 @@ p {
   line-height: normal;
   color: #fff;
   font-size: 1.3em !important;
-  border-radius: 0px !important;
+  border-radius: 0px;
   display: inline-block;
   text-rendering: optimizeLegibility;
   transition: background-color .2s ease-in, color .2s ease-in; }
@@ -931,9 +978,14 @@ p {
     outline: 0; }
 
 .btn--blue {
-  background-color: #174363 !important; }
+  background-color: #206095 !important; }
   .btn--blue:hover {
-    background-color: #124d80 !important; }
+    background-color: #174363 !important; }
+
+.btn--primary {
+  background-color: #206095 !important; }
+  .btn--primary:hover {
+    background-color: #174c78 !important; }
 
 .btn--next::after {
   font-family: "Font Awesome 5 Free";

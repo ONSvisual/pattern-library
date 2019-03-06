@@ -37,8 +37,9 @@ fieldset{
   </style>
 <body>
 
-  <fieldset>
-  <legend class="field__legend mars">Select all that apply</legend>
+  
+<fieldset>
+<legend class="field__legend mars">Select all that apply</legend>
   <div class="date-group">
     <div class="date-input-group">
         <label class="date-input-label" for="dob-day">Day</label>
@@ -71,6 +72,8 @@ fieldset{
         </div>
       </div>
     </div>
+
+
 </fieldset>
 
 
@@ -98,11 +101,10 @@ d3.select("#droppy2")
   .attr("value", function(d){return d})
   .text(function(d){return d});
 
-
 $('#droppy2').chosen({
   allow_single_deselect: true,
   no_results_text: "No results found for:",
-  max_selected_options: 5,
+  max_selected_options: 3,
   search: true
 
 })

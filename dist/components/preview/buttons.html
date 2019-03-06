@@ -41,7 +41,7 @@ fieldset{
     <h2 class="collator-title">Primary</h2>
     
 <!-- Start: @buttons--primary -->
-<button class="btn btn--primary btn--green" >Primary button</button><!-- End: @buttons--primary -->
+<button class="btn btn--primary" >Primary button</button><!-- End: @buttons--primary -->
 
   </div>
 <div class="collator-item">
@@ -49,7 +49,7 @@ fieldset{
     
 <!-- Start: @buttons--group -->
 <div class="btn-group_ons">
-        <button class="btn btn-group__btn btn--secondary btn--blue">Secondary button</button>
+        <button class="btn btn-group__btn btn--secondary">Secondary button</button>
 </div><!-- End: @buttons--group -->
 
   </div>
@@ -59,7 +59,7 @@ fieldset{
 <!-- Start: @buttons--group -->
 <div class="btn-group_ons">
         <button class="btn btn-group__btn btn--primary btn--green btn--primary-disabled">Primary disabled</button>
-        <button class="btn btn-group__btn btn--secondary btn--blue btn--primary-disabled">Secondary Disabled</button>
+        <button class="btn btn-group__btn btn--secondary btn--primary-disabled">Secondary Disabled</button>
 </div><!-- End: @buttons--group -->
 
   </div>
@@ -68,7 +68,7 @@ fieldset{
     
 <!-- Start: @buttons--group -->
 <div class="btn-group_ons">
-        <button class="btn btn-group__btn btn--primary btn--secondary btn--blue">Cancel</button>
+        <button class="btn btn-group__btn btn--secondary">Cancel</button>
         <button class="btn btn-group__btn btn--primary btn--green">Continue</button>
 </div><!-- End: @buttons--group -->
 
@@ -109,7 +109,7 @@ fieldset{
 <!-- Start: @buttons--group -->
 <div class="btn-group_ons">
         <button class="btn btn-group__btn btn--primary btn--green btn--start">Start</button>
-        <button class="btn btn-group__btn btn--secondary btn--blue btn--restart">Restart</button>
+        <button class="btn btn-group__btn btn--secondary btn--restart">Restart</button>
 </div><!-- End: @buttons--group -->
 
   </div>
@@ -157,11 +157,10 @@ d3.select("#droppy2")
   .attr("value", function(d){return d})
   .text(function(d){return d});
 
-
 $('#droppy2').chosen({
   allow_single_deselect: true,
   no_results_text: "No results found for:",
-  max_selected_options: 5,
+  max_selected_options: 3,
   search: true
 
 })

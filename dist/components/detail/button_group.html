@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../../assets/css/patternlib.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Spacing | Pattern Library</title>
+<title>Checkbox | Pattern Library</title>
 
 </head>
 <body>
@@ -55,14 +55,14 @@
     
     
 
-<div class="Pen" data-behaviour="pen" id="pen-25be966736faa5ec2b1260a9b810eedd">
+<div class="Pen" data-behaviour="pen" id="pen-7e7ec2c6c20fc010258af898d8d8f756">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/spacing.html" title="Component preview">
-            Spacing
+        <a class="Pen-previewLink" href="../preview/button_group.html" title="Component preview">
+            Checkbox
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -82,14 +82,14 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-25be966736faa5ec2b1260a9b810eedd">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-7e7ec2c6c20fc010258af898d8d8f756">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/spacing.html"
+                src="../preview/button_group.html"
                 sandbox="allow-same-origin allow-scripts allow-forms"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
@@ -104,7 +104,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-25be966736faa5ec2b1260a9b810eedd">
+    <div class="Browser" data-behaviour="browser" id="browser-7e7ec2c6c20fc010258af898d8d8f756">
 
     
 
@@ -113,19 +113,19 @@
         
         
         <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-25be966736faa5ec2b1260a9b810eedd-panel-notes">Notes</a>
+            <a href="#browser-7e7ec2c6c20fc010258af898d8d8f756-panel-notes">Notes</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-25be966736faa5ec2b1260a9b810eedd-panel-html">HTML</a>
+            <a href="#browser-7e7ec2c6c20fc010258af898d8d8f756-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-25be966736faa5ec2b1260a9b810eedd-panel-info">Info</a>
+            <a href="#browser-7e7ec2c6c20fc010258af898d8d8f756-panel-info">Info</a>
         </li>
         
         
@@ -134,11 +134,20 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-25be966736faa5ec2b1260a9b810eedd-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-7e7ec2c6c20fc010258af898d8d8f756-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h1 id="heading-1">Heading 1</h1>
-<p>This is a note!</p>
+        <h2 id="when-to-use-this-component">When to use this component</h2>
+<p>Use the checkboxes component when you need to help users select multiple options from a list or toggle a single option on or off</p>
+<h2 id="when-not-to-use-this-component">When not to use this component</h2>
+<p>Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the radios component.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Checkboxes are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘How would you like to be contacted?’.</p>
+<p>If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+<p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings">why and how to set legends as headings</a>.</p>
+<p>Unlike with radios, users can select multiple options from a list of checkboxes. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone.</p>
+<p>If needed, add a hint explaining this, for example, ‘Select all that apply’.</p>
+<p>There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://govuk-prototype-kit.herokuapp.com/">GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
         
     </div>
@@ -146,13 +155,21 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-25be966736faa5ec2b1260a9b810eedd-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7e7ec2c6c20fc010258af898d8d8f756-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Heading 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Heading 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Heading 3<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <pre><span class="hljs-comment">&lt;!--Button Group Selection--&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"buttons"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--education"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option1"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Education
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--income"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option2"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Income
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--job"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option3"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Job
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -160,11 +177,11 @@
 </div>
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-25be966736faa5ec2b1260a9b810eedd-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-7e7ec2c6c20fc010258af898d8d8f756-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@spacing</span>
+            <span class="Meta-value">@button_group</span>
         </li>
         
         
@@ -175,12 +192,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/spacing.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/button_group.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/spacing.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/button_group.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -190,7 +207,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">components/1-styles/spacing/spacing.hbs</span>
+            <span class="Meta-value">components/2-elements/button_group/button_group.hbs</span>
         </li>
         
         
@@ -312,8 +329,8 @@
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
                 <span>Spacing</span>
                 
 
@@ -376,8 +393,8 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button_group.html" data-pjax>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Button Group</span>
                 
 
