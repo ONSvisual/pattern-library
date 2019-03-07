@@ -35,7 +35,107 @@ min-width: 13em;
 background: white url("/assets/img/icons--chevron-down.png") no-repeat center right -1px;
 background-size: 42px;
 
+&::after{
+  background: #000;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+
+}
 }
 select{
       -webkit-appearance: none;
+}
+
+/**/
+
+// Select styling
+
+.select {
+  position: relative;
+  height: 47.5px;
+  background: white;
+  border:none;
+  max-width: 18em;
+  min-width: 13em;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    right: 14px;
+    bottom: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #ffffff transparent transparent transparent;
+    pointer-events: none;
+  }
+
+  &:before {
+    width: 43px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: $matisse;
+    content: '';
+    pointer-events: none;
+  }
+
+  &:hover {
+    &:before {
+    }
+  }
+
+  select {
+    font-size: 1.1em;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    padding-right: 35px;
+    padding-left: 15px;
+    border: 2px solid $matisse;
+
+    // Disable default styling on ff
+    -moz-appearance: none;
+
+    // Disable ugly ass outline on firefox
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+
+    // Disable default styling on webkit browsers
+    -webkit-appearance: none;
+
+    // Disable default arrow on IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      outline: 3px solid #FFA23A;
+    }
+  }
+}
+
+// IE 9 only
+@media all and (min-width:0\0) and (min-resolution:.001dpcm){
+  .select{
+    select {
+      padding-right: 0;
+    }
+
+    &:after, &:before {
+      display: none;
+    }
+  }
 }

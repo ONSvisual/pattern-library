@@ -366,9 +366,73 @@ p {
   padding: 0 1rem;
   background: white url("/assets/img/icons--chevron-down.png") no-repeat center right -1px;
   background-size: 42px; }
+  .input--select::after {
+    background: #000;
+    padding: 20px;
+    position: absolute;
+    top: 0; }
 
 select {
   -webkit-appearance: none; }
+
+/**/
+.select {
+  position: relative;
+  height: 47.5px;
+  background: white;
+  border: none;
+  max-width: 18em;
+  min-width: 13em; }
+  .select:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    right: 14px;
+    bottom: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #ffffff transparent transparent transparent;
+    pointer-events: none; }
+  .select:before {
+    width: 43px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: #206095;
+    content: '';
+    pointer-events: none; }
+  .select select {
+    font-size: 1.1em;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    padding-right: 35px;
+    padding-left: 15px;
+    border: 2px solid #206095;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+    .select select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000; }
+    .select select::-ms-expand {
+      display: none; }
+    .select select:focus {
+      outline: 3px solid #FFA23A; }
+
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  .select select {
+    padding-right: 0; }
+  .select:after, .select:before {
+    display: none; } }
 
 .input--checkbox {
   width: 30px;
