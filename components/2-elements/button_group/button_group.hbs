@@ -1,15 +1,31 @@
-  <!--Button Group Selection-->
-
-
-
-  <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn--select btn--education">
+  <!--Button Group Selection with icon-->
+<div>
+  <legend>Button group with Icon</legend>
+    <div class="btn-group" data-toggle="buttons">
+    <button class="btn btn--select btn--education" aria-labelledby="education">
       <input type="radio" name="options" id="option1" autocomplete="off"> Education
-    </label>
-    <label class="btn btn--select btn--income">
+    </button>
+    <button class="btn btn--select btn--income" aria-labelledby="income">
       <input type="radio" name="options" id="option2" autocomplete="off"> Income
-    </label>
-    <label class="btn btn--select btn--job">
+    </button>
+    <button class="btn btn--select btn--job" aria-labelledby="job">
       <input type="radio" name="options" id="option3" autocomplete="off"> Job
-    </label>
+    </button>
   </div>
+</div>
+
+  <!--Button Group Selection without icon-->
+<div>
+  <legend class="marg-top">Button group without Icon</legend>
+  <div class="btn-group" data-toggle="buttons">
+    <div class="btn btn--select " aria-labelledby="education">
+      <input type="radio" name="options" id="option1" autocomplete="off" tabindex="0"> 5 - 10
+    </div>
+    <div class="btn btn--select " tabindex="0" aria-labelledby="income">
+      <input type="radio" name="options" id="option2" autocomplete="off" tabindex="0"> 11 - 15
+    </div>
+    <div class="btn btn--select " tabindex="0" aria-labelledby="job">
+      <input type="radio" name="options" id="option3" autocomplete="off" tabindex="0"> 16 - 20
+    </div>
+  </div>
+</div>
