@@ -259,12 +259,11 @@ legend {
 
 .btn--select {
   color: #206095 !important;
-  border: solid #206095 !important;
-  border-radius: 40px !important;
-  border-right: solid #206095 !important;
+  border: 2px solid #206095 !important;
   margin-right: 15px !important;
   margin-bottom: 15px !important;
-  transition: all ease .2s; }
+  transition: all ease .2s;
+  border-radius: 30px !important; }
   .btn--select:hover {
     background-color: #206095;
     color: white !important; }
@@ -279,11 +278,26 @@ legend {
   background-color: #206095;
   color: white !important;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: 0 0 0pt 3pt orange; }
 
 .btn-group > .btn:active {
   background-color: #206095;
   color: white !important; }
+
+.btn-group > .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0pt 3pt orange; }
+
+.btn.active:focus {
+  outline: none !important;
+  box-shadow: 0 0 0pt 3pt orange; }
+
+.btn-group {
+  padding: 10px; }
+
+.btn.focus {
+  box-shadow: 0 0 0pt 3pt orange;
+  outline: none; }
 
 /* Tooltip */
 .test {
@@ -378,7 +392,7 @@ select {
 /**/
 .select {
   position: relative;
-  height: 47.5px;
+  height: 45px;
   background: white;
   border: none;
   max-width: 18em;

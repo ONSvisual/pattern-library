@@ -9,12 +9,11 @@
       }
 .btn--select{
   color: #206095 !important;
-border: solid #206095!important;
-border-radius: 40px !important;
-border-right: solid #206095!important;
+border: 2px solid #206095!important;
 margin-right: 15px!important;
 margin-bottom: 15px!important;
 transition: all ease .2s;
+border-radius: 30px!important;
 
 &:hover{
     background-color: $matisse;
@@ -28,14 +27,30 @@ transition: all ease .2s;
   margin-left: 0px!important;
 }
 .btn:active,
-.btn.active {
+.btn.active, {
   background-color: $matisse;
   color: white!important;
   -webkit-box-shadow: none;
-  box-shadow: none;
+  box-shadow: 0 0 0pt 3pt orange;
 }
 
 .btn-group>.btn:active{
   background-color: $matisse;
   color: white!important;
+}
+.btn-group>.btn:focus{
+  outline: none;
+  box-shadow: 0 0 0pt 3pt orange;
+}
+.btn.active:focus{
+  outline: none!important;
+  box-shadow: 0 0 0pt 3pt orange;
+
+}
+.btn-group{
+  padding: 10px;
+}
+.btn.focus{
+  box-shadow: 0 0 0pt 3pt orange;
+  outline: none;
 }

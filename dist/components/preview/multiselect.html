@@ -9,11 +9,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/a62dd01/css/main.css">
   <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.js"></script>
+
   <script src="../../js/chosen.jquery.js"></script>
   <link href="../../css/chosen.css" rel="stylesheet" />
+  <link href="../../fontawesome/css/all.css" rel="stylesheet" />
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
@@ -25,26 +27,20 @@
       margin-bottom: 10px;
       font-size: 1.3em;
     }
-
     .Preview-iframe{
       top:20px;
       left:20px;
       width: 90%!important;
     }
-fieldset{
-  padding-left: 5px;
-}
+    fieldset{
+      padding-left: 5px;
+    }
   </style>
 <body>
 
   <!--Multi select menu-->
 <legend>Start typing or click an option</legend>
 <div id="dropdown2"></div>
-
-
-</body>
-
-<!--Scripts-->
 <script>
 colors=["#206095", "#0F8243", "#00A5A1"]
 console.log('start of script')
@@ -71,9 +67,11 @@ $('#droppy2').chosen({
   no_results_text: "No results found for:",
   max_selected_options: 3,
   search: true
-
 })
 </script>
+
+
+</body>
 
 
 <!--<script src="../../assets/scripts/bundle.js" charset="utf-8"></script>-->
