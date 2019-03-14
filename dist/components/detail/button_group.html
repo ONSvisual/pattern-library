@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../../assets/css/patternlib.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Checkbox | Pattern Library</title>
+<title>Button group | Pattern Library</title>
 
 </head>
 <body>
@@ -62,7 +62,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/button_group.html" title="Component preview">
-            Checkbox
+            Button group
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -158,18 +158,36 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7e7ec2c6c20fc010258af898d8d8f756-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-comment">&lt;!--Button Group Selection--&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"buttons"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--education"</span>&gt;</span>
+        <pre><span class="hljs-comment">&lt;!--Button Group Selection with icon--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Button group with Icon<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"buttons"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--education"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"education"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option1"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Education
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--income"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--income"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"income"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option2"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Income
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--job"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select btn--job"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"job"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option3"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span> Job
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--Button Group Selection without icon--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"marg-top"</span>&gt;</span>Button group without Icon<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"buttons"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select "</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"education"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option1"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span> 5 - 10
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select "</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"income"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option2"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span> 11 - 15
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--select "</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"job"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option3"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span> 16 - 20
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>

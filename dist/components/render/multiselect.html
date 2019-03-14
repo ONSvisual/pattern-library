@@ -3,4 +3,32 @@
 <!--Multi select menu-->
 <legend>Start typing or click an option</legend>
 <div id="dropdown2"></div>
+<script>
+colors=["#206095", "#0F8243", "#00A5A1"]
+console.log('start of script')
+dropdownData=["Matisse","Green","Teal","Pink","lorem"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:80%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 3,
+  search: true
+})
+</script>
 
