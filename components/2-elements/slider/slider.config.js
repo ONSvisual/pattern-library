@@ -15,5 +15,5 @@
     'name': 'simple',
     'label': 'Simple'
 
-  },
-  }
+  }],
+};
