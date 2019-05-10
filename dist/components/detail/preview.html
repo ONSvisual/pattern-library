@@ -162,7 +162,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/chosen.jquery.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../css/chosen.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../fontawesome/css/all.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> /&gt;</span>
-
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://d3js.org/d3.v5.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/d3-slider.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
@@ -192,6 +193,37 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!--&lt;script src="../../assets/scripts/bundle.js" charset="utf-8"&gt;&lt;/script&gt;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        colors = [<span class="hljs-string">"#206095"</span>, <span class="hljs-string">"#0F8243"</span>, <span class="hljs-string">"#00A5A1"</span>]
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'start of script'</span>)
+        dropdownData = [<span class="hljs-string">"Matisse"</span>, <span class="hljs-string">"Green"</span>, <span class="hljs-string">"Teal"</span>, <span class="hljs-string">"Pink"</span>, <span class="hljs-string">"lorem"</span>]
+        d3.select(<span class="hljs-string">"#dropdown2"</span>)
+            .append(<span class="hljs-string">"select"</span>)
+            .attr(<span class="hljs-string">"id"</span>, <span class="hljs-string">"droppy2"</span>)
+            .attr(<span class="hljs-string">"style"</span>, <span class="hljs-string">"width:80%"</span>)
+            .attr(<span class="hljs-string">"multiple"</span>, <span class="hljs-string">"true"</span>)
+            .attr(<span class="hljs-string">"data-placeholder"</span>, <span class="hljs-string">"Choose up to 3 letters"</span>)
+            .style(<span class="hljs-string">"font-size"</span>, <span class="hljs-string">"23px"</span>)
+        d3.select(<span class="hljs-string">"#droppy2"</span>)
+            .append(<span class="hljs-string">"option"</span>)
+        d3.select(<span class="hljs-string">"#droppy2"</span>)
+            .selectAll(<span class="hljs-string">"p"</span>)
+            .data(dropdownData)
+            .enter()
+            .append(<span class="hljs-string">"option"</span>)
+            .attr(<span class="hljs-string">"value"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+                <span class="hljs-keyword">return</span> d
+            })
+            .text(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+                <span class="hljs-keyword">return</span> d
+            });
+        $(<span class="hljs-string">'#droppy2'</span>).chosen({
+            <span class="hljs-attr">allow_single_deselect</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">no_results_text</span>: <span class="hljs-string">"No results found for:"</span>,
+            <span class="hljs-attr">max_selected_options</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">search</span>: <span class="hljs-literal">true</span>
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/copy.js"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/script.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
@@ -715,6 +747,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="single-dropdown.html" data-pjax>
                 <span>Single Dropdown</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slider.html" data-pjax>
+                <span>Slider</span>
                 
 
 <div class="Status Status--unlabelled">

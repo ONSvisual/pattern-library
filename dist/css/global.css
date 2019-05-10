@@ -50,7 +50,7 @@ legend {
   border-right: 2px solid #fff; }
 
 .box {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   padding: 0;
   margin-right: 15px;
   margin-bottom: 15px; }
@@ -64,7 +64,7 @@ legend {
   width: 70px;
   border-radius: 50%;
   display: block;
-  margin: 20px auto; }
+  margin: 10px auto 0; }
 
 .poppy {
   color: #d32f2f; }
@@ -216,8 +216,17 @@ legend {
   font-size: 18px;
   margin: 0;
   font-weight: bold;
-  padding: 4px 0;
-  border-top: 2px dashed #ccc; }
+  padding: 10px 0; }
+
+.alert-pattern {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 0;
+  border-left: 8px solid #003b57;
+  color: #333;
+  margin-bottom: 10px; }
+  .alert-pattern p {
+    margin: 0; }
 
 .box-title {
   font-size: 20px;
@@ -1156,6 +1165,54 @@ p {
   margin-right: 1rem; }
   .btn-group .btn-group__btn:last-of-type {
     margin-right: 0; }
+
+.slider text {
+  font-size: 18px; }
+
+#slider-simple text {
+  font-size: 18px; }
+
+.parameter-value path {
+  fill: #0F8243;
+  stroke: white;
+  stroke-width: 1.5px; }
+
+.parameter-value path:focus {
+  fill: #0F8243;
+  stroke: orange;
+  stroke-width: 3px; }
+
+input {
+  border: none;
+  border-radius: 0;
+  border-bottom: solid 1px #ddd;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 16px 0;
+  padding: 6px 0 0 0; }
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+p {
+  line-height: 32px;
+  font-size: 18px;
+  margin: 16px 0;
+  padding: 6px 0 10px 0; }
+
+#value-simple {
+  font-size: 18px; }
+
+.slider-label {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.no-pad {
+  padding: 0; }
 
 .results_box--blue {
   background-color: #206095;

@@ -15,7 +15,8 @@
   <script src="../../js/chosen.jquery.js"></script>
   <link href="../../css/chosen.css" rel="stylesheet" />
   <link href="../../fontawesome/css/all.css" rel="stylesheet" />
-
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="../../js/d3-slider.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
@@ -38,12 +39,13 @@
   </style>
 <body>
 
-    <legend>Primary, secondary & grey Palettes</legend>
-  <p style="margin-top:0;">Click on the colour to copy the hex code</p>
-
+    <legend>Primary, extended & grey Palettes</legend>
+  <div class="alert-pattern">
+<p>Click on the hex value to copy the code</p>
+</div>
   <!--Logo Colours-->
   <div class="row" style="padding:0;">
-    <p class="title">Logo colours</p>
+    <p class="title">ONS Logo colours</p>
     <div class="col-md-1 box col-xs-5 center box">
       <div class="circle circle--onsblue"></div>
       <p class="col-title onsblue">ONS Blue<br><span>#003C57</span></p>
@@ -88,17 +90,11 @@
 
 
 
-<!--Extended-->
+<!--Extended Colours-->
+
 <div class="row" style="padding:0;">
   <p class="title">Extended Palette</p>
-  <div class="col-md-1 box col-xs-5 center box">
-    <div class="circle circle--onsblue"></div>
-    <p class="col-title onsblue">ONS Blue<br><span>#003C57</span></p>
-  </div>
-  <div class="col-md-1 box col-xs-5 center box">
-  <div class="circle circle--onsgreen"></div>
-  <p class="col-title onsgreen">ONS Green<br><span>#A8BD3A</span></p>
-  </div>
+
   <div class="col-md-1 box col-xs-5 center box">
     <div class="circle circle--teal"></div>
     <p class="col-title teal">Teal<br><span>#008080</span></p>
@@ -227,6 +223,34 @@
 
 
 <!--<script src="../../assets/scripts/bundle.js" charset="utf-8"></script>-->
+<script>
+colors=["#206095", "#0F8243", "#00A5A1"]
+console.log('start of script')
+dropdownData=["Matisse","Green","Teal","Pink","lorem"]
+d3.select("#dropdown2")
+  .append("select")
+  .attr("id","droppy2")
+  .attr("style", "width:80%")
+  .attr("multiple", "true")
+  .attr("data-placeholder", "Choose up to 3 letters")
+  .style("font-size", "23px")
+d3.select("#droppy2")
+  .append("option")
+d3.select("#droppy2")
+  .selectAll("p")
+  .data(dropdownData)
+  .enter()
+  .append("option")
+  .attr("value", function(d){return d})
+  .text(function(d){return d});
+
+$('#droppy2').chosen({
+  allow_single_deselect: true,
+  no_results_text: "No results found for:",
+  max_selected_options: 3,
+  search: true
+})
+</script>
 <script src="../../js/copy.js" charset="utf-8"></script>
 <script src="../../js/script.js"></script>
 
@@ -262,3 +286,4 @@ $('textarea').keyup(function() {
     </script>
 
 </html>
+
