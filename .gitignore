@@ -2,4 +2,3 @@ gulpfile.js
 components/2-elements/textarea/textarea.scss
 public/css/global.css
 components/2-elements/button/button.scss
-/node_modules
