@@ -41,7 +41,6 @@
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Pattern Library</a>
 </div>
-<!--Pattern Library-->
 
     </div>
 
@@ -137,17 +136,226 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-7e7ec2c6c20fc010258af898d8d8f756-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="when-to-use-this-component">When to use this component</h2>
-<p>Use the checkboxes component when you need to help users select multiple options from a list or toggle a single option on or off</p>
-<h2 id="when-not-to-use-this-component">When not to use this component</h2>
-<p>Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the radios component.</p>
-<h2 id="how-it-works">How it works</h2>
-<p>Checkboxes are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘How would you like to be contacted?’.</p>
-<p>If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
-<p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings">why and how to set legends as headings</a>.</p>
-<p>Unlike with radios, users can select multiple options from a list of checkboxes. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone.</p>
-<p>If needed, add a hint explaining this, for example, ‘Select all that apply’.</p>
-<p>There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://govuk-prototype-kit.herokuapp.com/">GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+        <h2 id="the-html">The HTML</h2>
+<code><pre>&lt;div <span class="hljs-keyword">class</span>="btn btn--select " aria-labelledby="Male"&gt;
+      &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>="radio" <span class="hljs-type">name</span>="gender" <span class="hljs-keyword">value</span>="Male" autocomplete="off" tabindex="0"&gt; Male
+    &lt;/div&gt;
+    &lt;div <span class="hljs-keyword">class</span>="btn btn--select " tabindex="0" aria-labelledby="Female"&gt;
+      &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>="radio" <span class="hljs-type">name</span>="gender" <span class="hljs-keyword">value</span>="Female" autocomplete="off" tabindex="0" checked&gt; Female
+    &lt;/div&gt;</pre></code><p>The <code>name</code> needs to be the same for the group.</p>
+<p>The <code>value</code> is what you can return when you search for which button is checked by javascript. Use</p>
+<code><pre>gender = document.query<span class="hljs-constructor">Selector('<span class="hljs-params">input</span>[<span class="hljs-params">name</span>=<span class="hljs-string">"gender"</span>]:<span class="hljs-params">checked</span>')</span>.value;</pre></code><h2 id="the-css">The CSS</h2>
+<code><pre>.<span class="hljs-keyword">btn-group </span>{
+<span class="hljs-symbol">  padding:</span> <span class="hljs-number">10</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  overflow:</span> auto<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn-group,
+</span>.<span class="hljs-keyword">btn-group-vertical </span>{
+<span class="hljs-symbol">  position:</span> relative<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  display:</span> inline-<span class="hljs-keyword">block;
+</span>  vertical-align: middle<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn-group&gt;.btn:first-child:not(:last-child):not(.dropdown-toggle) </span>{
+  <span class="hljs-keyword">border-top-right-radius: </span><span class="hljs-number">0</span><span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-bottom-right-radius: </span><span class="hljs-number">0</span><span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn-group </span>.<span class="hljs-keyword">btn </span>{
+<span class="hljs-symbol">  float:</span> left<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  margin:</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+  margin-right: <span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+  margin-<span class="hljs-keyword">bottom: </span><span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+  margin-left: <span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-right: </span><span class="hljs-number">1</span>px solid <span class="hljs-comment">#D0D2D3;</span>
+}
+
+.<span class="hljs-keyword">btn-group-vertical&gt;.btn,
+</span>.<span class="hljs-keyword">btn-group&gt;.btn </span>{
+<span class="hljs-symbol">  position:</span> relative<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  float:</span> left<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn </span>{
+<span class="hljs-symbol">  position:</span> relative<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  padding:</span> <span class="hljs-number">10</span>px <span class="hljs-number">15</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  margin:</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20</span>px<span class="hljs-comment">;</span>
+  line-height: <span class="hljs-keyword">normal;
+</span><span class="hljs-symbol">  color:</span> <span class="hljs-comment">#fff;</span>
+  font-size: <span class="hljs-number">1</span>.<span class="hljs-number">3</span>em !important<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-radius: </span><span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  display:</span> inline-<span class="hljs-keyword">block;
+</span>  text-rendering: optimizeLegibility<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  transition:</span> <span class="hljs-keyword">background-color </span>.<span class="hljs-number">2</span>s ease-in, color .<span class="hljs-number">2</span>s ease-in<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn--select </span>{
+  margin-left: <span class="hljs-number">0</span>px !important<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn--select </span>{
+<span class="hljs-symbol">  color:</span> <span class="hljs-comment">#206095 !important;</span>
+<span class="hljs-symbol">  border:</span> <span class="hljs-number">2</span>px solid <span class="hljs-comment">#206095 !important;</span>
+  margin-right: <span class="hljs-number">15</span>px !important<span class="hljs-comment">;</span>
+  margin-<span class="hljs-keyword">bottom: </span><span class="hljs-number">15</span>px !important<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  transition:</span> all ease .<span class="hljs-number">2</span>s<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-radius: </span><span class="hljs-number">30</span>px !important<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn </span>{
+  font-family: <span class="hljs-string">"Open Sans"</span>, Helvetica, Arial, sans-serif<span class="hljs-comment">;</span>
+  font-weight: <span class="hljs-number">400</span><span class="hljs-comment">;</span>
+  font-size: <span class="hljs-number">14</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  display:</span> inline-<span class="hljs-keyword">block;
+</span><span class="hljs-symbol">  width:</span> auto<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  cursor:</span> pointer<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  padding:</span> <span class="hljs-number">6</span>px <span class="hljs-number">16</span>px <span class="hljs-number">10</span>px <span class="hljs-number">16</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  border:</span> <span class="hljs-number">0</span> none<span class="hljs-comment">;</span>
+  text-align: center<span class="hljs-comment">;</span>
+  -webkit-appearance: none<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  transition:</span> <span class="hljs-keyword">background-color </span><span class="hljs-number">0</span>.<span class="hljs-number">25</span>s ease-out<span class="hljs-comment">;</span>
+  text-decoration: none<span class="hljs-comment">;</span>
+  line-height: <span class="hljs-number">24</span>px<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn </span>{
+<span class="hljs-symbol">  display:</span> inline-<span class="hljs-keyword">block;
+</span><span class="hljs-symbol">  padding:</span> <span class="hljs-number">6</span>px <span class="hljs-number">12</span>px<span class="hljs-comment">;</span>
+  margin-<span class="hljs-keyword">bottom: </span><span class="hljs-number">0</span><span class="hljs-comment">;</span>
+  font-size: <span class="hljs-number">14</span>px<span class="hljs-comment">;</span>
+  font-weight: <span class="hljs-number">400</span><span class="hljs-comment">;</span>
+  line-height: <span class="hljs-number">1</span>.<span class="hljs-number">42857143</span><span class="hljs-comment">;</span>
+  text-align: center<span class="hljs-comment">;</span>
+  white-space: nowrap<span class="hljs-comment">;</span>
+  vertical-align: middle<span class="hljs-comment">;</span>
+  -ms-touch-action: manipulation<span class="hljs-comment">;</span>
+  touch-action: manipulation<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  cursor:</span> pointer<span class="hljs-comment">;</span>
+  -webkit-user-select: none<span class="hljs-comment">;</span>
+  -moz-user-select: none<span class="hljs-comment">;</span>
+  -ms-user-select: none<span class="hljs-comment">;</span>
+  user-select: none<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">background-image: </span>none<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  border:</span> <span class="hljs-number">1</span>px solid transparent<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-radius: </span><span class="hljs-number">4</span>px<span class="hljs-comment">;</span>
+}
+
+data-toggle=<span class="hljs-string">"buttons"</span>]&gt;.<span class="hljs-keyword">btn </span>input[type=<span class="hljs-string">"checkbox"</span>],
+[data-toggle=<span class="hljs-string">"buttons"</span>]&gt;.<span class="hljs-keyword">btn </span>input[type=<span class="hljs-string">"radio"</span>],
+[data-toggle=<span class="hljs-string">"buttons"</span>]&gt;.<span class="hljs-keyword">btn-group&gt;.btn </span>input[type=<span class="hljs-string">"checkbox"</span>],
+[data-toggle=<span class="hljs-string">"buttons"</span>]&gt;.<span class="hljs-keyword">btn-group&gt;.btn </span>input[type=<span class="hljs-string">"radio"</span>] {
+<span class="hljs-symbol">  position:</span> absolute<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  clip:</span> rect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<span class="hljs-comment">;</span>
+  pointer-events: none<span class="hljs-comment">;</span>
+}
+
+input[type=<span class="hljs-string">"checkbox"</span>],
+input[type=<span class="hljs-string">"radio"</span>] {
+  -webkit-appearance: none<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn-group </span>input {
+<span class="hljs-symbol">  height:</span> <span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  width:</span> <span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  position:</span> absolute<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  left:</span> -<span class="hljs-number">100</span>px<span class="hljs-comment">;</span>
+}
+
+input[type=<span class="hljs-string">"checkbox"</span>],
+input[type=<span class="hljs-string">"radio"</span>] {
+<span class="hljs-symbol">  margin:</span> <span class="hljs-number">4</span>px <span class="hljs-number">0</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+  margin-top: <span class="hljs-number">1</span>px\<span class="hljs-number">9</span><span class="hljs-comment">;</span>
+  line-height: <span class="hljs-keyword">normal;
+</span>}
+
+input[type=<span class="hljs-string">"checkbox"</span>],
+input[type=<span class="hljs-string">"radio"</span>] {
+  -webkit-<span class="hljs-keyword">box-sizing: </span><span class="hljs-keyword">border-box;
+</span>  -moz-<span class="hljs-keyword">box-sizing: </span><span class="hljs-keyword">border-box;
+</span>  <span class="hljs-keyword">box-sizing: </span><span class="hljs-keyword">border-box;
+</span><span class="hljs-symbol">  padding:</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+}
+
+input {
+<span class="hljs-symbol">  border:</span> none<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-bottom-color: </span>currentcolor<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-bottom-style: </span>none<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-bottom-width: </span>medium<span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-radius: </span><span class="hljs-number">0</span><span class="hljs-comment">;</span>
+  <span class="hljs-keyword">border-bottom: </span>solid <span class="hljs-number">1</span>px <span class="hljs-comment">#ddd;</span>
+  font-size: <span class="hljs-number">18</span>px<span class="hljs-comment">;</span>
+  line-height: <span class="hljs-number">32</span>px<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  margin:</span> <span class="hljs-number">16</span>px <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+<span class="hljs-symbol">  padding:</span> <span class="hljs-number">6</span>px <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+}
+
+input,
+select {
+  font-family: <span class="hljs-string">"Open Sans"</span>, Helvetica, Arial, sans-serif<span class="hljs-comment">;</span>
+  font-size: <span class="hljs-number">14</span>px<span class="hljs-comment">;</span>
+}
+
+<span class="hljs-keyword">button,
+</span>input,
+select,
+textarea {
+  font-family: inherit<span class="hljs-comment">;</span>
+  font-size: inherit<span class="hljs-comment">;</span>
+  line-height: inherit<span class="hljs-comment">;</span>
+}
+
+input {
+  line-height: <span class="hljs-keyword">normal;
+</span>}
+
+<span class="hljs-keyword">button,
+</span>input,
+optgroup,
+select,
+textarea {
+<span class="hljs-symbol">  margin:</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+<span class="hljs-symbol">  font:</span> inherit<span class="hljs-comment">;</span>
+  font-size: inherit<span class="hljs-comment">;</span>
+  line-height: inherit<span class="hljs-comment">;</span>
+  font-family: inherit<span class="hljs-comment">;</span>
+<span class="hljs-symbol">  color:</span> inherit<span class="hljs-comment">;</span>
+}
+
+.<span class="hljs-keyword">btn-group-vertical </span>&gt; .<span class="hljs-keyword">btn.active, </span>.<span class="hljs-keyword">btn-group-vertical </span>&gt; .<span class="hljs-keyword">btn:active, </span>.<span class="hljs-keyword">btn-group-vertical </span>&gt; .<span class="hljs-keyword">btn:focus, </span>.<span class="hljs-keyword">btn-group-vertical </span>&gt; .<span class="hljs-keyword">btn:hover, </span>.<span class="hljs-keyword">btn-group </span>&gt; .<span class="hljs-keyword">btn.active, </span>.<span class="hljs-keyword">btn-group </span>&gt; .<span class="hljs-keyword">btn:active, </span>.<span class="hljs-keyword">btn-group </span>&gt; .<span class="hljs-keyword">btn:focus, </span>.<span class="hljs-keyword">btn-group </span>&gt; .<span class="hljs-keyword">btn:hover </span>{
+z-index: <span class="hljs-number">2</span><span class="hljs-comment">;</span>
+}
+<span class="hljs-symbol">
+.btn:</span>active, .<span class="hljs-keyword">btn.active </span>{
+<span class="hljs-keyword">background-color: </span><span class="hljs-comment">#206095;</span>
+<span class="hljs-symbol">color:</span> white !important<span class="hljs-comment">;</span>
+-webkit-<span class="hljs-keyword">box-shadow: </span>none<span class="hljs-comment">;</span>
+<span class="hljs-keyword">box-shadow: </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>pt <span class="hljs-number">3</span>pt <span class="hljs-keyword">orange;
+</span>}
+
+.<span class="hljs-keyword">btn--select:hover </span>{
+<span class="hljs-keyword">background-color: </span><span class="hljs-comment">#206095;</span>
+<span class="hljs-symbol">color:</span> white !important<span class="hljs-comment">;</span>
+}
+<span class="hljs-symbol">.btn:</span>focus {
+<span class="hljs-symbol">outline:</span> none<span class="hljs-comment">;</span>
+<span class="hljs-keyword">box-shadow: </span><span class="hljs-number">0</span>px <span class="hljs-number">0</span>px <span class="hljs-number">0</span> <span class="hljs-number">3</span>px <span class="hljs-comment">#FFA23A;</span>
+<span class="hljs-symbol">color:</span> white<span class="hljs-comment">;</span>
+outline-offset: <span class="hljs-number">0</span>px<span class="hljs-comment">;</span>
+}</pre></code><h2 id="the-javascript">The javascript</h2>
+<p>Javascript is used to toggle buttons active on click.</p>
+<p>Here’s what you need to include. It needs d3.js.</p>
+<code><pre>d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'click'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{
+    d3.selectAll(<span class="hljs-string">'.btn'</span>).classed(<span class="hljs-string">'active'</span>,<span class="hljs-literal">false</span>)
+    d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'active'</span>,<span class="hljs-literal">true</span>)
+    d3.selectAll(<span class="hljs-string">'.btn'</span>).selectAll(<span class="hljs-string">'input'</span>).attr(<span class="hljs-string">'checked'</span>,<span class="hljs-literal">false</span>)
+    d3.<span class="hljs-built_in">select</span>(this).<span class="hljs-built_in">select</span>(<span class="hljs-string">'input'</span>).attr(<span class="hljs-string">'checked'</span>,<span class="hljs-literal">true</span>)
+  })
+
+  d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'mouseover'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'focus'</span>,<span class="hljs-literal">true</span>)})
+
+  d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'mouseout'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'focus'</span>,<span class="hljs-literal">false</span>)})</pre></code><h2 id="usage">Usage</h2>
+<p>See something similar in action in <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/childhealth/articles/childrenwhosefamiliesstruggletogetonaremorelikelytohavementaldisorders/2019-03-26">Children whose families struggle to get on a more likely to have mental disorders</a>.</p>
 
         
     </div>
@@ -191,7 +399,6 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
-    
 </div>
 
     
@@ -309,7 +516,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -333,7 +540,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -357,7 +564,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -381,7 +588,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -421,7 +628,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -445,7 +652,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -469,7 +676,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -493,7 +700,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -517,7 +724,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -541,7 +748,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -565,7 +772,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -589,7 +796,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -613,7 +820,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -637,7 +844,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -661,7 +868,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -685,7 +892,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -709,7 +916,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -733,7 +940,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -757,7 +964,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -781,7 +988,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -805,7 +1012,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>
@@ -845,7 +1052,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="background-color: #D32F2F;" title="In development"></span>
+<span class="Status-dot" style="border-color: #D32F2F;" title="In development"></span>
 
 
 </div>

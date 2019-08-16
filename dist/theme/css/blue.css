@@ -1622,7 +1622,7 @@ h6 {
 .Header-navToggle svg {
   display: none;
   margin: 0 auto;
-  fill: #206095; }
+  fill: #fff; }
 
 .Frame .Header-navToggleIcon--open {
   display: block; }

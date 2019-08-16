@@ -1419,8 +1419,8 @@ h6 {
     background-color: rgba(83, 83, 99, 0.1) !important; }
 
 .select2-results__option--highlighted[aria-selected] {
-  background-color: #14f !important;
-  color: #fff !important; }
+  background-color: #eee !important;
+  color: #111 !important; }
 
 .FileBrowser-item {
   display: none; }
@@ -1583,10 +1583,10 @@ h6 {
           align-items: center;
   position: relative;
   z-index: 10;
-  background-color: #dcdcdc;
-  /*box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 0 rgba(0, 0, 0, 0.1);*/
+  background-color: #eee;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 0 rgba(0, 0, 0, 0.1);
   text-overflow: ellipsis;
-  color: #184362; }
+  color: #111; }
 
 .Header-title {
   padding: 0.75rem 1rem;
@@ -1597,47 +1597,32 @@ h6 {
     color: inherit;
     text-decoration: none; }
 
-    .Header-title:before {
-      background-image: url("/assets/img/ons_logo.png");
-      background-repeat: no-repeat;
-      content: "";
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      background-position: 0;
-      background-size: cover;
-      border-radius: 100%;
-      vertical-align: bottom;
-      margin-right: 0.5rem;
-    }
-
 .Header-button {
-  -webkit-border-end: 1px solid rgba(255, 255, 255, 0.25);
-          border-inline-end: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-border-end: 1px solid rgba(17, 17, 17, 0.25);
+          border-inline-end: 1px solid rgba(17, 17, 17, 0.25);
   display: block;
   border: 0;
-  background-color: #184362;
-  height: 3.1rem;
+  height: 3rem;
   width: 3rem;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   color: inherit;
   cursor: pointer; }
   [dir="ltr"] .Header-button {
-    border-right: 0px solid rgba(255, 255, 255, 0.25); }
+    border-right: 1px solid rgba(17, 17, 17, 0.25); }
   [dir="rtl"] .Header-button {
-    border-left: 1px solid rgba(255, 255, 255, 0.25); }
+    border-left: 1px solid rgba(17, 17, 17, 0.25); }
   .Header-button:focus, .Header-button:active {
     outline: none; }
   .Header-button:hover {
-    background-color: #124d80 !important; }
+    background-color: rgba(17, 17, 17, 0.05); }
   .Header-button:active {
-    background-color: rgba(255, 255, 255, 0.1); }
+    background-color: rgba(17, 17, 17, 0.1); }
 
 .Header-navToggle svg {
   display: none;
   margin: 0 auto;
-  fill: #fff; }
+  fill: #111; }
 
 .Frame .Header-navToggleIcon--open {
   display: block; }
@@ -1936,13 +1921,13 @@ h6 {
     margin: 0.75rem; }
 
 .Preview-iframe {
-  top: 20px;
+  top: 0;
   right: 0;
   bottom: 0;
-  left: 20px;
+  left: 0;
   position: absolute;
   z-index: 0;
-  width: 90%;
+  width: 100%;
   height: 100%; }
 
 .Preview-overlay {
@@ -2064,9 +2049,7 @@ h6 {
     max-width: 100%; }
   .Prose p code,
   .Prose li code {
-    padding: 0.125rem;
-    border: 1px solid red;
-  border-radius: 3px; }
+    padding: 0.125rem; }
   .Prose code pre {
     padding: 0.125rem 0.5rem;
     margin: 1rem -0.5rem;
@@ -2175,14 +2158,13 @@ h6 {
   white-space: nowrap; }
 
 .Tree-title {
-  font: normal 1rem/1.66667 "Open Sans", Helvetica, Arial, sans-serif;
+  font: normal 0.75rem/1.66667 "Open Sans", Helvetica, Arial, sans-serif;
   letter-spacing: 0.075em;
   text-transform: uppercase;
   -webkit-padding-start: 1rem;
           padding-inline-start: 1rem;
   margin-bottom: 0.5rem;
-  color: #333;
-font-weight: bold;}
+  color: rgba(83, 83, 99, 0.75); }
   [dir="ltr"] .Tree-title {
     padding-left: 1rem; }
   [dir="rtl"] .Tree-title {
@@ -2208,9 +2190,7 @@ font-weight: bold;}
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #535363;
-
- }
+  color: #535363; }
   .Tree-collectionLabel:hover {
     background-color: rgba(83, 83, 99, 0.05); }
   .Tree-collectionLabel span {
@@ -2218,12 +2198,12 @@ font-weight: bold;}
             padding-inline-start: 0.75rem;
     -webkit-margin-start: -1.75rem;
             margin-inline-start: -1.75rem;
-    display: block;    font-size: 1.1em;
+    display: block;
     position: relative; }
     [dir="ltr"] .Tree-collectionLabel span {
-      padding-left: 1rem; }
+      padding-left: 0.75rem; }
     [dir="rtl"] .Tree-collectionLabel span {
-      padding-right: 1rem; }
+      padding-right: 0.75rem; }
     [dir="ltr"] .Tree-collectionLabel span {
       margin-left: -1.75rem; }
     [dir="rtl"] .Tree-collectionLabel span {
@@ -2232,7 +2212,7 @@ font-weight: bold;}
     offset-inline-start: 0;
     display: inline-block;
     position: absolute;
-    top: 0.3rem;
+    top: 0.25rem;
     width: 0.75rem;
     height: 0.75rem;
     background-image: url("../img/icon-navigation-opened.svg");
@@ -2258,8 +2238,7 @@ font-weight: bold;}
           align-items: center;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  text-decoration: none;
-    font-size: 1.1em; }
+  text-decoration: none; }
   .Tree-entityLink:hover {
     background-color: rgba(83, 83, 99, 0.05); }
   .is-current .Tree-entityLink {
