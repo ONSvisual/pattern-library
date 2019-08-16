@@ -225,15 +225,11 @@ Here's what you need to include. It needs d3.js.
 
 ```
 d3.selectAll('.btn').on('click',function(d){
-    d3.selectAll('.btn').classed('active',false)
-    d3.select(this).classed('active',true)
-    d3.selectAll('.btn').selectAll('input').attr('checked',false)
-    d3.select(this).select('input').attr('checked',true)
-  })
-
-  d3.selectAll('.btn').on('mouseover',function(d){d3.select(this).classed('focus',true)})
-
-  d3.selectAll('.btn').on('mouseout',function(d){d3.select(this).classed('focus',false)})
+  d3.selectAll('.btn').classed('active',false)
+  d3.select(this).classed('active',true)
+  d3.selectAll('.btn').selectAll('input').property('checked',false)
+  d3.select(this).select('input').property('checked',true)
+})
 ```
 
 ## Usage

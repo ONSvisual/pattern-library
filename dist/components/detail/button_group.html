@@ -345,16 +345,12 @@ outline-offset: <span class="hljs-number">0</span>px<span class="hljs-comment">;
 }</pre></code><h2 id="the-javascript">The javascript</h2>
 <p>Javascript is used to toggle buttons active on click.</p>
 <p>Here’s what you need to include. It needs d3.js.</p>
-<code><pre>d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'click'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{
-    d3.selectAll(<span class="hljs-string">'.btn'</span>).classed(<span class="hljs-string">'active'</span>,<span class="hljs-literal">false</span>)
-    d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'active'</span>,<span class="hljs-literal">true</span>)
-    d3.selectAll(<span class="hljs-string">'.btn'</span>).selectAll(<span class="hljs-string">'input'</span>).attr(<span class="hljs-string">'checked'</span>,<span class="hljs-literal">false</span>)
-    d3.<span class="hljs-built_in">select</span>(this).<span class="hljs-built_in">select</span>(<span class="hljs-string">'input'</span>).attr(<span class="hljs-string">'checked'</span>,<span class="hljs-literal">true</span>)
-  })
-
-  d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'mouseover'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'focus'</span>,<span class="hljs-literal">true</span>)})
-
-  d3.selectAll(<span class="hljs-string">'.btn'</span>).on(<span class="hljs-string">'mouseout'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span></span>{d3.<span class="hljs-built_in">select</span>(this).classed(<span class="hljs-string">'focus'</span>,<span class="hljs-literal">false</span>)})</pre></code><h2 id="usage">Usage</h2>
+<code><pre><span class="hljs-selector-tag">d3</span><span class="hljs-selector-class">.selectAll</span>(<span class="hljs-string">'.btn'</span>)<span class="hljs-selector-class">.on</span>(<span class="hljs-string">'click'</span>,function(d){
+  <span class="hljs-selector-tag">d3</span><span class="hljs-selector-class">.selectAll</span>(<span class="hljs-string">'.btn'</span>)<span class="hljs-selector-class">.classed</span>(<span class="hljs-string">'active'</span>,false)
+  <span class="hljs-selector-tag">d3</span><span class="hljs-selector-class">.select</span>(this)<span class="hljs-selector-class">.classed</span>(<span class="hljs-string">'active'</span>,true)
+  <span class="hljs-selector-tag">d3</span><span class="hljs-selector-class">.selectAll</span>(<span class="hljs-string">'.btn'</span>)<span class="hljs-selector-class">.selectAll</span>(<span class="hljs-string">'input'</span>)<span class="hljs-selector-class">.property</span>(<span class="hljs-string">'checked'</span>,false)
+  <span class="hljs-selector-tag">d3</span><span class="hljs-selector-class">.select</span>(this)<span class="hljs-selector-class">.select</span>(<span class="hljs-string">'input'</span>)<span class="hljs-selector-class">.property</span>(<span class="hljs-string">'checked'</span>,true)
+})</pre></code><h2 id="usage">Usage</h2>
 <p>See something similar in action in <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/childhealth/articles/childrenwhosefamiliesstruggletogetonaremorelikelytohavementaldisorders/2019-03-26">Children whose families struggle to get on a more likely to have mental disorders</a>.</p>
 
         
