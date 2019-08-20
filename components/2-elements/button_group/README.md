@@ -210,7 +210,7 @@ box-shadow: 0 0 0pt 3pt orange;
 background-color: #206095;
 color: white !important;
 }
-.btn:focus {
+.btn:focus, btn.focus {
 outline: none;
 box-shadow: 0px 0px 0 3px #FFA23A;
 color: white;

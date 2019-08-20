@@ -3,3 +3,6 @@ components/2-elements/textarea/textarea.scss
 public/css/global.css
 components/2-elements/button/button.scss
 /node_modules
+components/2-elements/.DS_Store
+components/.DS_Store
+.DS_Store
