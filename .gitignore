@@ -6,3 +6,6 @@ components/2-elements/button/button.scss
 components/2-elements/.DS_Store
 components/.DS_Store
 .DS_Store
+.DS_Store
+dist/.DS_Store
+dist/fontawesome/.DS_Store
