@@ -1,6 +1,7 @@
 # Welcome to the new pattern library
 
-Put your feet up, you're in good hands.
+~~Put your feet up, you're in good hands.~~
+This pattern library is very rough, out of date, missing lots of bits and pieces
 
 Clone this repo
 ```git clone https://github.com/ONSvisual/pattern-library```

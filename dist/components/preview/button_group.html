@@ -42,7 +42,7 @@
     <!--Button Group Selection with icon-->
 <div>
   <legend>Button group with Icon</legend>
-    <div class="btn-group" data-toggle="buttons">
+    <div role="group" class="btn-group" data-toggle="buttons">
     <button class="btn btn--select btn--education" aria-labelledby="education">
       <input type="radio" name="options" id="option1" autocomplete="off"> Education
     </button>
@@ -57,18 +57,20 @@
 
   <!--Button Group Selection without icon-->
 <div>
+  <fieldset>
   <legend class="marg-top">Button group without Icon</legend>
-  <div class="btn-group" data-toggle="buttons">
+  <div role="group" class="btn-group" data-toggle="buttons">
     <div class="btn btn--select " aria-labelledby="education">
-      <input type="radio" name="options" id="option1" autocomplete="off" tabindex="0"> 5 - 10
+      <input type="radio" name="options" id="option1" autocomplete="off" tabindex="0"><label for="option1">5 to 10</label>
     </div>
     <div class="btn btn--select " tabindex="0" aria-labelledby="income">
-      <input type="radio" name="options" id="option2" autocomplete="off" tabindex="0"> 11 - 15
+      <input type="radio" name="options" id="option2" autocomplete="off" tabindex="0"><label for="option2">11 to 15</label>
     </div>
     <div class="btn btn--select " tabindex="0" aria-labelledby="job">
-      <input type="radio" name="options" id="option3" autocomplete="off" tabindex="0"> 16 - 20
+      <input type="radio" name="options" id="option3" autocomplete="off" tabindex="0"><label for="option3">16 - 20</label>
     </div>
   </div>
+  </fieldset>
 </div>
 
 
