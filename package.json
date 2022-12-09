@@ -5,7 +5,7 @@
     "@frctl/fractal": "^1.1.7",
     "browser-sync": "^2.26.3",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "fractal-component": "^3.4.2",
     "gulp": "^4.0.0",
     "gulp-notify": "^3.2.0",
